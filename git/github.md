@@ -3,5 +3,6 @@
 ## ssh-keygen
 
 ## git clone
-* ssh·Î clone ¹Þ±â
-*git add commit push ÇÏ±â
+* sshë¡œ clone ë°›ê¸°
+* git add commit push í•˜ê¸°
+* git status
