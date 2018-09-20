@@ -1,14 +1,15 @@
-package my.examples.http;
+package my.examples.was;
 
 import java.net.ServerSocket;
 import java.net.Socket;
-// 소켓 생성하기
-public class Connector{
+
+public class Connector {
     private int port;
 
     public Connector(int port){
         this.port = port;
     }
+    // 소캣 생성하기
     public void run(){
         ServerSocket serverSocket = null;
         try{
@@ -21,9 +22,7 @@ public class Connector{
         }catch (Exception e){
             e.printStackTrace();
         }finally {
-            try{
-                serverSocket.close();
-            }catch(Exception e){}
+            try { serverSocket.close(); }catch (Exception e){}
         }
     }
 }
