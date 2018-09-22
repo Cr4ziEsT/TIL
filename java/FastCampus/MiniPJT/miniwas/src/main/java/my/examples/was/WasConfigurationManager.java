@@ -2,6 +2,8 @@ package my.examples.was;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.File;
+
 // 싱글턴 패턴
 public class WasConfigurationManager {
     private ObjectMapper objectMapper;
@@ -18,6 +20,26 @@ public class WasConfigurationManager {
     // 3. public static 메소드를 만든다. instance를 리턴하는..
     public static WasConfigurationManager getInstance(){
         return instance;
+    }
+
+    public void seveMiniWasConfiguration(MiniWasConfiguration miniWasConfiguration, String fileName)
+        throws RuntimeException{
+        try{
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.writeValue(new File(fileName), miniWasConfiguration);
+        }catch (Exception ex){
+            throw new RuntimeException("파일 저장이 안됩니다!");
+        }
+    }
+
+    public MiniWasConfiguration getMiniWasConfiguration(String fileName){
+        try{
+            MiniWasConfiguration readObj =
+                    objectMapper.readValue(new File(fileName), MiniWasConfiguration.class);
+            return readObj;
+        }catch (Exception ex){
+            return null;
+        }
     }
     // WasConfigurationManager wasConfigurationManager = new WasConfigurationManager(); (X)
     // WasConfigurationManager wcm1 = WasConfigurationManager.getInstance();
