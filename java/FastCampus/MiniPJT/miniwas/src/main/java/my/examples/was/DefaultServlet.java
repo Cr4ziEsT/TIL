@@ -12,7 +12,13 @@ public class DefaultServlet {
         if(webpath.equals("/")){
             webpath = webpath + "index.html";   // 기본 경로(/)에 대한 응답 파일 지정
         }
-        String path = "/java" + webpath;
+        // String path = "/java" + webpath; // -> 정적 처리
+
+        // 설정 관리자를 이용하여 m.json 파일에 저장된 내용을 읽고 그 내용에 적힌 directory 경로로 path를 설정한다.
+        WasConfigurationManager wcm = WasConfigurationManager.getInstance();
+        MiniWasConfiguration miniWasConfiguration = wcm.getMiniWasConfiguration("/java/m.json");
+        String path = miniWasConfiguration.getStaticDir() + webpath;
+
         File file = new File(path); // 해당 경로의 파일 정보를 읽는다.
 
         OutputStream out = response.getOut();   // 응답에 대한 내용을 알아낸다.
