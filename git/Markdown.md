@@ -42,3 +42,4 @@
 * 강조 *
 
 ``박스에 넣기``
+``public static void main(String[] args)``
