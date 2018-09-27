@@ -42,8 +42,16 @@
 * 강조 *
 
 ``박스에 넣기``
-``public static void main(String[] args)``
+```java
+public static void main(String[] args){
+     System.out.println("hello java");
+}
+```
 
 > - [하이퍼 텍스트](www.naver.com)
 
+글 쓰기 ~~~~ 
+글 쓰기 ~~
+
+공백
 
