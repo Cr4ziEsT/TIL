@@ -58,6 +58,7 @@ public static void main(String[] args){
 공은 엔터 두 번
 
 기본 형식
+vi test
 
 ### 제목
 * 강조
