@@ -21,9 +21,10 @@ public class GuestbookLoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // 암호를 읽어들인다.
+        String password = req.getParameter("password");
+        System.out.println(password);
 
         // 암호가 관리자 암호인지 확인
-
 
         // 맞다면 session에 값을 저장.
 

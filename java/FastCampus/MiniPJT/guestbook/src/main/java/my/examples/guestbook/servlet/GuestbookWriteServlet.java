@@ -12,6 +12,11 @@ public class GuestbookWriteServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException{
         // 이름과 내용을 읽어들인다.
+        String name = req.getParameter("name");
+        String content = req.getParameter("content");
+
+        System.out.println(name);
+        System.out.println(content);
 
         // 이름과 내용을 검사한다.
 

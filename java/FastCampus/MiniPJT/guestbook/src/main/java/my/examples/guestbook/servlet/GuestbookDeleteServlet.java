@@ -11,7 +11,9 @@ import java.io.IOException;
 public class GuestbookDeleteServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // id를 읽어들인다.
+        // id를 읽어들인다. query parameter ?id=100
+        String id = req.getParameter("id");
+        System.out.println(id);
 
         // 세션에서 관리자 로그인 정보가 있는지 확인한다.
 
