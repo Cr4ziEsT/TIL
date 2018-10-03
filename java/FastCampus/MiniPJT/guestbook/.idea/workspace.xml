@@ -8,10 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b7739d65-a1ba-4198-bf0a-3d002e07f973" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookDeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookDeleteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookListServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookLoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookLoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookWriteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookWriteServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../miniwas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../miniwas/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../miniwas/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../miniwas/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../miniwep/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../miniwep/.idea/workspace.xml" afterDir="false" />
@@ -29,10 +25,12 @@
     <session id="2116033172">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -286,7 +284,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -351,7 +349,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -525,16 +523,19 @@
       <updated>1538446594036</updated>
       <workItem from="1538446596596" duration="5994000" />
       <workItem from="1538454036369" duration="124000" />
+      <workItem from="1538463318419" duration="11000" />
+      <workItem from="1538463349206" duration="10000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6118000" />
+    <option name="totallyTimeSpent" value="6139000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1600" height="875" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.253866" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26159793" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
