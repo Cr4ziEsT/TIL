@@ -34,3 +34,13 @@ class Data{
         this.n = name;
     }
 }
+
+-------------------
+
+SessionScope - 브라우저별로 유지가 되는 정보.
+    HttpSession session = req.getSession();
+    session.setAttribute("이름", 값); // 값은 Object
+
+    값을 꺼낼 때
+    String str = (String)session.getAttribute("이름"); // 값이 String일 경우
+RequestScope - forward하는 동안 유지가 되는 정보.

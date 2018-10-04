@@ -18,6 +18,11 @@ public class Guestbook {
         this.content = content;
     }
 
+    public Guestbook(Long id, String name, String content){
+        this(name, content);
+        this.id = id;
+    }
+
     // getter , setter 만들어주세요.
 
     public Long getId() {

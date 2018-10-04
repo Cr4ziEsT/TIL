@@ -13,8 +13,12 @@
 </head>
 <body>
     <h1>list</h1>
-    <a href="/guestbook/login">관리자 로그인</a>
-    <a href="/guestbook/logout">관리자 로그아웃</a>
+    <c:if test="${sessionScope.admin != 'true'}">
+        <a href="/guestbook/login">관리자 로그인</a>
+    </c:if>
+    <c:if test="${sessionScope.admin == 'true'}">
+        <a href="/guestbook/logout">관리자 로그아웃</a>
+    </c:if>
     <br><br>
 
     방명록 건수 : ${requestScope.guestbookSize}<br>
@@ -30,7 +34,9 @@
     <c:forEach items="${requestScope.guestbookList}" var="guestbook">
         이름 : ${guestbook.name} <br>
         내용 : ${guestbook.content} <br>
-        <a href="/guestbook/delete?id=${guestbook.id}">삭제</a><br><br>
+        <c:if test="${sessionScope.admin == 'true'}">
+            <a href="/guestbook/delete?id=${guestbook.id}">삭제</a><br><br>
+        </c:if>
     </c:forEach>
 </body>
 </html>
