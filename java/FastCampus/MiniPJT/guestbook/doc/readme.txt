@@ -15,3 +15,22 @@ redirect
    302 응답
    ------ GET /guestbook/list --------------->
    <-------------------------------------------
+
+----------------
+
+http://sinpk.tistory.com/entry/JSP-EL-%ED%91%9C%EA%B8%B0%EB%B2%95
+
+${guestbook.name}
+이거는 guestbook.getName(); //위의 el표기법은 객체의 field를 사용하는 것이 아니라 객체의 property를 사용하는것.
+
+예를 들어
+${data.name}
+class Data{
+    private String n; // field
+    public String getName(){ // getter메소드, name property
+        return n;
+    }
+    public void setName(String name){ // setter메소드, name property
+        this.n = name;
+    }
+}
