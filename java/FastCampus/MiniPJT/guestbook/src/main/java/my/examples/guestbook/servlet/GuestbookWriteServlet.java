@@ -12,6 +12,7 @@ public class GuestbookWriteServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException{
         // 이름과 내용을 읽어들인다.
+        req.setCharacterEncoding("UTF-8");  // 한글 깨짐 현상
         String name = req.getParameter("name");
         String content = req.getParameter("content");
 

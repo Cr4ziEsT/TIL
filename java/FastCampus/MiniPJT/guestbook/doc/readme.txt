@@ -44,3 +44,17 @@ SessionScope - 브라우저별로 유지가 되는 정보.
     값을 꺼낼 때
     String str = (String)session.getAttribute("이름"); // 값이 String일 경우
 RequestScope - forward하는 동안 유지가 되는 정보.
+
+-------------------
+
+guestbook 데이터는 db에 저장되어야 한다.
+
+table 생성하는 sql 문장을 작성, id는 자동 생성.
+실제 DBMS에 테이블을 생성
+
+GuestbookDao
+    List<Guestbook> getList();
+    int addGuestbook(Guestbook);
+    int deleteGuestbook(Long id);
+
+-------------------
