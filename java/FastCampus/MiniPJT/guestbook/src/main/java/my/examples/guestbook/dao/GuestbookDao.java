@@ -13,5 +13,18 @@ public class GuestbookDao {
     private String dbId = "sa";
     private String dbPassword = "";
 
+    public List<Guestbook> getGuestbookList(){
+        List<Guestbook> list = new ArrayList<>();
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try{
 
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }finally{
+            DbUtil.close(conn,ps,rs);
+        }
+        return list;
+    }
 }
