@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7739d65-a1ba-4198-bf0a-3d002e07f973" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/examples/guestbook/dao/GuestbookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/examples/guestbook/dao/GuestbookDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../miniwas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../miniwas/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/ClassFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/ClassFinder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/ClassLoaderTest04.java" beforeDir="false" afterPath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/ClassLoaderTest04.java" afterDir="false" />
@@ -61,7 +62,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="11" />
-          <entry key="java" value="2286" />
+          <entry key="java" value="2988" />
           <entry key="jsp" value="302" />
           <entry key="sql" value="1231" />
           <entry key="txt" value="213" />
@@ -71,7 +72,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="11" />
-          <entry key="JAVA" value="2286" />
+          <entry key="JAVA" value="2988" />
           <entry key="JSP" value="302" />
           <entry key="PLAIN_TEXT" value="213" />
           <entry key="Scratch" value="1231" />
@@ -140,7 +141,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/views/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="563">
@@ -167,14 +168,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/guestbook/dao/GuestbookDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-135">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -575,18 +573,18 @@
       <workItem from="1538701574188" duration="994000" />
       <workItem from="1539223003826" duration="30000" />
       <workItem from="1539224285115" duration="636000" />
-      <workItem from="1538751654611" duration="372000" />
+      <workItem from="1538751654611" duration="792000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19614000" />
+    <option name="totallyTimeSpent" value="20034000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="800" height="875" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3550532" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3550532" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -714,23 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/guestbook/dao/DbUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/guestbook/dao/GuestbookDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookWriteServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -759,6 +740,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
           <caret line="38" column="15" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/guestbook/dao/DbUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/guestbook/dao/GuestbookDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-135">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
