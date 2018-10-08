@@ -44,4 +44,23 @@ public class GuestbookDao {
         }
         return list;
     }
+
+    public int addGuestbook(Guestbook guestbook){
+        int count = 0;
+        Connection conn = null;
+        PreparedStatement ps = null;
+        try{
+            conn = DbUtil.connect(dbUrl,dbId,dbPassword);
+            String sql = "insert into guestbook(id, name, content, regdate values (null, ?, ?, now())";
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, guestbook.getName());
+            ps.setString(2, guestbook.getContent());
+            count = ps.executeUpdate();
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }finally {
+            DbUtil.close(conn, ps);
+        }
+        return count;
+    }
 }
