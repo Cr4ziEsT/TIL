@@ -1,4 +1,4 @@
 package my.examples.was;
-
-public class MyServlet {
+@WebServlet("/my")
+public class MyServelt {
 }
