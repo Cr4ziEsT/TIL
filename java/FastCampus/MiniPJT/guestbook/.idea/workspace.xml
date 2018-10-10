@@ -61,7 +61,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="11" />
-          <entry key="java" value="2988" />
+          <entry key="java" value="3423" />
           <entry key="jsp" value="302" />
           <entry key="sql" value="1231" />
           <entry key="txt" value="213" />
@@ -71,7 +71,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="11" />
-          <entry key="JAVA" value="2988" />
+          <entry key="JAVA" value="3423" />
           <entry key="JSP" value="302" />
           <entry key="PLAIN_TEXT" value="213" />
           <entry key="Scratch" value="1231" />
@@ -170,8 +170,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/guestbook/dao/GuestbookDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-135">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="653">
+              <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -267,7 +270,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="5">
     <option name="y" value="25" />
     <option name="width" value="800" />
     <option name="height" value="875" />
@@ -572,15 +575,15 @@
       <workItem from="1538701574188" duration="994000" />
       <workItem from="1539223003826" duration="30000" />
       <workItem from="1539224285115" duration="636000" />
-      <workItem from="1538751654611" duration="899000" />
+      <workItem from="1538751654611" duration="1131000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20141000" />
+    <option name="totallyTimeSpent" value="20373000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="800" height="875" extended-state="4" />
+    <frame x="0" y="25" width="800" height="875" extended-state="5" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.3550532" />
@@ -751,8 +754,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/guestbook/dao/GuestbookDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="653">
+          <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

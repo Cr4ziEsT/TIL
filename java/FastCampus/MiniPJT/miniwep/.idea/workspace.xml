@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81dad519-f6c2-4e98-ba8d-474ffeefcb2b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/ClassFinder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/ClassLoaderTest04.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/ClassLoaderTest05.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/ClassLoaderTest06.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/MyServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/WebServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/WebServletMapperManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../guestbook/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../guestbook/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../guestbook/doc/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../guestbook/doc/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../guestbook/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../guestbook/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../guestbook/src/main/java/my/examples/guestbook/servlet/GuestbookWriteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../guestbook/src/main/java/my/examples/guestbook/servlet/GuestbookWriteServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../miniwas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../miniwas/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../miniwas/miniwas.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../miniwas/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../miniwas/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniwep.iml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -58,9 +66,10 @@
     <session id="2113478469">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -72,16 +81,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
+            <state relative-caret-position="266">
               <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/wepapp/RequestTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="76">
@@ -150,7 +159,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -195,11 +204,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538010256022" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538713336711" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -232,9 +241,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1533" height="875" extended-state="6" />
+    <frame x="0" y="25" width="1600" height="875" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26531985" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27319586" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -267,6 +276,13 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/Connector.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/RequestTest.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -278,13 +294,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
         </state>
       </provider>
     </entry>
