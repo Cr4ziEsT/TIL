@@ -38,7 +38,7 @@
     <session id="2116033172">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
@@ -52,7 +52,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="11" />
-          <entry key="java" value="3807" />
+          <entry key="java" value="3929" />
           <entry key="jsp" value="302" />
           <entry key="sql" value="1231" />
           <entry key="txt" value="213" />
@@ -62,7 +62,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="11" />
-          <entry key="JAVA" value="3807" />
+          <entry key="JAVA" value="3929" />
           <entry key="JSP" value="302" />
           <entry key="PLAIN_TEXT" value="213" />
           <entry key="Scratch" value="1231" />
@@ -110,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookWriteServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+            <state relative-caret-position="468">
+              <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -173,8 +173,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookListServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+            <state relative-caret-position="331">
+              <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -191,7 +191,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookDeleteServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="493">
@@ -227,17 +227,17 @@
         <option value="$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookLoginServlet.java" />
         <option value="$PROJECT_DIR$/webapp/WEB-INF/views/list.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookLogoutServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookListServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/Guestbook.java" />
         <option value="$PROJECT_DIR$/doc/readme.txt" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/485fecbd-4e40-4726-95bb-e408df9afb6a/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/bb46e365-5402-45e1-8df6-d43d013ed901/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookWriteServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/examples/guestbook/dao/DbUtil.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/07d3b07d-4060-4d94-af45-40940b7bddf3/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/my/examples/guestbook/dao/GuestbookDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookDeleteServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookListServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookWriteServlet.java" />
       </list>
     </option>
   </component>
@@ -393,6 +393,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538634823508" />
     <property name="database.console.LAST_STATE" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../miniwas" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -567,16 +568,15 @@
       <workItem from="1539223003826" duration="30000" />
       <workItem from="1539224285115" duration="636000" />
       <workItem from="1538751654611" duration="1474000" />
-      <workItem from="1539511685309" duration="246000" />
+      <workItem from="1539511685309" duration="499000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20962000" />
+    <option name="totallyTimeSpent" value="21215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="800" height="873" extended-state="4" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36569148" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -679,23 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookWriteServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookLogoutServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/WEB-INF/views/list.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
@@ -703,27 +686,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookLoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
           <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookListServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -748,6 +714,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookListServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="20" column="55" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookLoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookLogoutServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/guestbook/servlet/GuestbookWriteServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
