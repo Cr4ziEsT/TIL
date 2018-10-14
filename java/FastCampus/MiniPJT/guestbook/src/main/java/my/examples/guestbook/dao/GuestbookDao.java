@@ -63,4 +63,22 @@ public class GuestbookDao {
         }
         return count;
     }
+
+    public int deleteGuestbook(Long id){
+        int count = 0;
+        Connection conn = null;
+        PreparedStatement ps = null;
+        try{
+            conn = DbUtil.connect(dbUrl, dbId, dbPassword);
+            String sql = "delete from guestbook where id = ?";
+            ps = conn.prepareStatement(sql);
+            ps.setLong(1, id);
+            count = ps.executeUpdate();
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }finally {
+            DbUtil.close(conn, ps);
+        }
+        return count;
+    }
 }

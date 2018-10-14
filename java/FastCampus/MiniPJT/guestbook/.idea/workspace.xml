@@ -7,15 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7739d65-a1ba-4198-bf0a-3d002e07f973" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../miniwas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../miniwas/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/ClassFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/ClassFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/ClassLoaderTest04.java" beforeDir="false" afterPath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/ClassLoaderTest04.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/ClassLoaderTest05.java" beforeDir="false" afterPath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/ClassLoaderTest05.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/ClassLoaderTest06.java" beforeDir="false" afterPath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/ClassLoaderTest06.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/MyServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/MyServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/WebServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/WebServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/WebServletMapperManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../miniwas/src/main/java/my/examples/was/WebServletMapperManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../miniwep/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../miniwep/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/my/examples/guestbook/dao/GuestbookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/examples/guestbook/dao/GuestbookDao.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -61,7 +53,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="11" />
-          <entry key="java" value="3423" />
+          <entry key="java" value="3706" />
           <entry key="jsp" value="302" />
           <entry key="sql" value="1231" />
           <entry key="txt" value="213" />
@@ -71,7 +63,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="11" />
-          <entry key="JAVA" value="3423" />
+          <entry key="JAVA" value="3706" />
           <entry key="JSP" value="302" />
           <entry key="PLAIN_TEXT" value="213" />
           <entry key="Scratch" value="1231" />
@@ -171,7 +163,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/guestbook/dao/GuestbookDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="653">
-              <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+              <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -270,7 +262,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="5">
+  <component name="ProjectFrameBounds" extendedState="4">
     <option name="y" value="25" />
     <option name="width" value="800" />
     <option name="height" value="875" />
@@ -575,15 +567,15 @@
       <workItem from="1538701574188" duration="994000" />
       <workItem from="1539223003826" duration="30000" />
       <workItem from="1539224285115" duration="636000" />
-      <workItem from="1538751654611" duration="1131000" />
+      <workItem from="1538751654611" duration="1412000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20373000" />
+    <option name="totallyTimeSpent" value="20654000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="800" height="875" extended-state="5" />
+    <frame x="0" y="25" width="800" height="875" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.3550532" />
@@ -755,7 +747,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/my/examples/guestbook/dao/GuestbookDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="653">
-          <caret line="63" column="21" selection-start-line="63" selection-start-column="21" selection-end-line="63" selection-end-column="21" />
+          <caret line="81" column="21" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
