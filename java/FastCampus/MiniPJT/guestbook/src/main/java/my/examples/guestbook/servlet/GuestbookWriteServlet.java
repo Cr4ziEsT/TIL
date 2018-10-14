@@ -1,5 +1,7 @@
 package my.examples.guestbook.servlet;
 
+import my.examples.guestbook.dao.GuestbookDao;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,6 +24,9 @@ public class GuestbookWriteServlet extends HttpServlet {
         // 이름과 내용을 검사한다.
 
         // DB에 이름과 내용을 저장한다.
+        Guestbook guestbook = new Guestbook(name, content);
+        GuestbookDao guestbookDao = new GuestbookDao();
+        guestbookDao.addGuestbook(guestbook);
 
         // /guestbook/list 로 리다이렉트
         resp.sendRedirect("/guestbook/list");
