@@ -1,5 +1,7 @@
 package my.examples.guestbook.servlet;
 
+import my.examples.guestbook.dao.GuestbookDao;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,6 +25,8 @@ public class GuestbookDeleteServlet extends HttpServlet{
         if(admin != null && admin.equals("true")) {
             // id에 해당하는 방명록을 삭제한다.
             System.out.println(id + "를 삭제합니다.");
+            GuestbookDao guestbookDao = new GuestbookDao();
+            guestbookDao.deleteGuestbook(Long.parseLong(id));
         }
 
         resp.sendRedirect("/guestbook/list");

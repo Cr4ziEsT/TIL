@@ -6,9 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7739d65-a1ba-4198-bf0a-3d002e07f973" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/examples/guestbook/dao/GuestbookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/examples/guestbook/dao/GuestbookDao.java" afterDir="false" />
-    </list>
+    <list default="true" id="b7739d65-a1ba-4198-bf0a-3d002e07f973" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,7 +38,7 @@
     <session id="2116033172">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
@@ -265,7 +263,7 @@
   <component name="ProjectFrameBounds" extendedState="4">
     <option name="y" value="25" />
     <option name="width" value="800" />
-    <option name="height" value="875" />
+    <option name="height" value="873" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -567,18 +565,17 @@
       <workItem from="1538701574188" duration="994000" />
       <workItem from="1539223003826" duration="30000" />
       <workItem from="1539224285115" duration="636000" />
-      <workItem from="1538751654611" duration="1412000" />
+      <workItem from="1538751654611" duration="1474000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20654000" />
+    <option name="totallyTimeSpent" value="20716000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="800" height="875" extended-state="4" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.3550532" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3550532" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
