@@ -1,6 +1,5 @@
 package my.examples.was;
 
-import com.sun.beans.finder.ClassFinder;
 
 import java.lang.annotation.Annotation;
 import java.util.HashMap;
@@ -8,24 +7,25 @@ import java.util.List;
 import java.util.Map;
 
 public class WebServletMapperManager {
-    public Map<String, Class> findServlet(String baseDir){
+    public Map<String, Class> findServlet(String baseDir) {
         Map<String, Class> map = new HashMap<>();
 
         ClassFinder classFinder = new ClassFinder(baseDir);
         List<String> classList = classFinder.findAllClass();
 
-        for(String className : classList){
+        for (String className : classList) {
             try {
                 Class clazz = Class.forName(className);
                 Annotation annotation = clazz.getAnnotation(WebServlet.class);
-                if (annotation != null) {
+                Class superClass = clazz.getSuperclass();
+                if (annotation != null && superClass == HttpSerlvet.class) {
                     // WebServlet의 value값을 출력한다.
                     WebServlet webServlet = (WebServlet) annotation;
                     String value = webServlet.value();
 
                     map.put(value, clazz);
                 }
-            }catch(Exception ex){
+            } catch (Exception ex) {
                 ex.printStackTrace();
             }
         } // for
