@@ -18,7 +18,7 @@ public class MyBean {
 
     public MyBean(Map<String, String> map){
         this.map = map;
-        System.out.println(map.getClass().getName());
+//        System.out.println(map.getClass().getName());
     }
 
     public String getValue(String key){
