@@ -19,10 +19,9 @@ public class DBConfig {
     private String username = "crazy";
     private String password = "1234";
 
-    // PlatformTransactionManager 을 생성할 DataSource가 메소드로 들어온다. 따라서 Spring 컨테이너는 DataSource를 먼저 만든다.
-    // DataSource 가 들어오면, 내부적으로 DataSourceTransactionManager 라는 객체를 생성한다.
-    // DataSource 가 들어오면, 내부적으로 DataSourceTransactionManager 라는 객체를 생성한다.
-    // return type 는 PlatformTransactionManager 인데 리턴하는 것은 DataSourceTransactionManager 인 것을 보아
+    // PlatformTransactionManager를 생성할 DataSource가 메소드로 들어온다. 따라서 Spring 컨테이너는 DataSource를 먼저 만든다.
+    // DataSource가 들어오면, 내부적으로 DataSourceTransactionManager 라는 객체를 생성한다.
+    // return type은 PlatformTransactionManager 인데 리턴하는 것은 DataSourceTransactionManager 인 것을 보아
     // DataSourceTransactionManager는 PlatformTransactionManager 를 상속받고 있는 객체임을 알 수 있다.
     @Bean
     public PlatformTransactionManager transactionManager(DataSource ds){
