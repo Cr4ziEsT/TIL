@@ -5,6 +5,8 @@ import examples.daoexam.dto.Board;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service        // Spring 에서 자동으로 Component 로 등록!
 public class BoardServiceImpl implements BoardService {
     private BoardDao boardDao;      // BoardService 는 DAO를 사용해야 함. (의존성 주입 : 생성자 주입 방식 or 필드 주입 방식 사용)
@@ -31,5 +33,14 @@ public class BoardServiceImpl implements BoardService {
         // 1건 읽어온다.
         Board board = boardDao.getBoard(id);
         return board;
+    }
+
+    // 읽기 전용 메소드
+    // start : 시작 id
+    // limit : 읽어올 수
+    @Override
+    @Transactional(readOnly = true)
+    public List<Board> getBoards(int start, int limit) {
+        return null;
     }
 }
