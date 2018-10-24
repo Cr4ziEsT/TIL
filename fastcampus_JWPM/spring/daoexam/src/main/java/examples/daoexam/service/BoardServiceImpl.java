@@ -22,7 +22,7 @@ public class BoardServiceImpl implements BoardService {
         // board 정보 저장, id 값은 저장시 자동으로 생성된다.
         Long id = boardDao.addBoard(board); //insert 한 id 값이 나옴
         board.setId(id);                    // 하지만 아직 생성자를 통해 받아온 board에는 id 값이 설정이 안되어 있으므로 setID를 통해 id 값을 설정해주고
-        return board;                       // reture을 통해서 id 값을 추가해줌
+        return board;                       // reture을 통해서 비어있는 id 값을 추가해줌
     }
 
     @Override

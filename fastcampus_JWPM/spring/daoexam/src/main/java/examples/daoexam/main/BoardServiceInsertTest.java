@@ -22,6 +22,6 @@ public class BoardServiceInsertTest {
         board.setTitle("title 1");
 
         Board result = boardService.addBoard(board);
-        System.out.println(result); // Board에 toString을 오버라이드 해놓
+        System.out.println(result); // Board에 toString을 오버라이드 해놓았음.
     }
 }

@@ -1,5 +1,6 @@
 package examples.daoexam.main;
 
+import examples.daoexam.config.ApplicationConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -9,7 +10,7 @@ import java.sql.SQLException;
 
 public class DataSourceTest {
     public static void main(String[] args){
-        ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationContext.class);   // Java Config 를 읽어들인다.
+        ApplicationContext ac = new AnnotationConfigApplicationContext(ApplicationConfig.class);   // Java Config 를 읽어들인다.
         DataSource ds = ac.getBean(DataSource.class);
         Connection conn = null;
         try{

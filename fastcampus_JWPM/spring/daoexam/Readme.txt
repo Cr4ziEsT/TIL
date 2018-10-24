@@ -34,8 +34,7 @@ https://github.com/brettwooldridge/HikariCP         -> HikariCP
 
 - 트랜젝션 처리를 하려면
 DataSource, PlatformTransactionManager 를 구현하는 Bean을 선언한다.
-Java Config에 @EnableTransactionManagement 을 붙여주면, 트랜잭션과 관련된
-AOP가 적용된다.
+Java Config에 @EnableTransactionManagement 을 붙여주면, 트랜잭션과 관련된 AOP가 적용된다.
 
 ---------------------------------------------
 

@@ -38,7 +38,7 @@ public class BoardDao {
 
 
     public Long addBoard(Board board) {
-        // SqlParameterSource : 일종의 Map 객체
+        // SqlParameterSource : 일종의 Map 객체, insert 문장에 바인딩 할 값을 가지고 있음.
         // BeanPropertySqlParameterSource : Board DTO의 내용을 읽어들여서 Insert문장에 바인딩 할 값을 가지고 있는 SqlParameterSouce 객체를 생성.
         SqlParameterSource params = new BeanPropertySqlParameterSource(board);  // 결국 board 객체로부터 sql에 바인딩 할 값을 갖고 있는 객체를 생성하는 것
 
