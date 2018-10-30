@@ -11,6 +11,8 @@ import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 /*
 Dao 만드는 방법
@@ -57,7 +59,24 @@ public class BoardDao {
         // Map에 넣을 값이 하나밖에 없을 경우에는 아래와 같은 형식으로도 만들 수 있다.
         Map<String, Long> map = Collections.singletonMap("id", id);
         return jdbc.update(sql, map);   //update메소드는 입력, 수정, 삭제 할 때 사용하는 메소드(sql을 실행하고 map 객체를 바인딩)
+    }
 
+    public int deleteBoard(Long id){
+        String sql = "DELETE FROM board WHWER id=:id";
+        Map<String, Long> map = new HashMap<>();
+        map.put("id", 1L);
+        return jdbc.update(sql, map);
+    }
+
+    public int updateBoard(Board board){
+        String sql = "UPDATE board SET name=:name, title=:title, content=:content WHERE id=:id";
+//        Map<String, Object> map = new HashMap<>();
+//        map.put("id", board.getId());
+//        map.put("name", board.getName());
+//        map.put("title", board.getTitle());
+//        map.put("content", board.getContent());
+        SqlParameterSource params = new BeanPropertySqlParameterSource(board);
+        return jdbc.update(sql, params);
     }
 
     public Board getBoard(Long id){
@@ -76,6 +95,16 @@ public class BoardDao {
             // 세번째 파라미터 : Mapper (칼럼을 DTO에 담아주기위한 규칙)
             return jdbc.queryForObject(sql, params, rowMapper);
             // queryForObject는 sql ?에 파라미터 값을 채워서 실행되고 내부적으로 ResultSet이 RowMapper를 이용해서 ResultSet을 얻은 결괄 dto에 담아서 리턴해준다
+        }catch(Exception ex){
+            return null;
+        }
+    }
+
+    public List<Board> getBoards(){     // service에서 사용
+        String sql = "SELECT id, name, title, content, regdate, read_count FROM board ORDER BY id DESC";
+        try{
+            RowMapper<Board> rowMapper = BeanPropertyRowMapper.newInstance(Board.class);
+            return jdbc.query(sql, rowMapper);      // .query는 여러건 조회하는 것 (List를 반환)
         }catch(Exception ex){
             return null;
         }
