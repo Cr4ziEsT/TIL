@@ -12,7 +12,8 @@
 <h1>Test</h1>
 <br>
 
-<a href="/boards">게시판</a><br>
-<img src="/images/github.git">
+<a href="/boards">게시판</a><br><br>
+<img src="/images/github.gif">
 </body>
 </html>
+

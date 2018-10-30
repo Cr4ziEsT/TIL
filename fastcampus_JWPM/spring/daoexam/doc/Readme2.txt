@@ -55,17 +55,22 @@ src/main/webapp/WEB-INF/views  : jsp가 저장되는 폴더
 3. 웹 어플리케이션 설정파일도 작성
 : src/main/webapp/WEB-INF/web.xml
 : web.xml파일에서는 2개의 설정파일을 읽어들인다.
--ApplicationConfig.class(부모설정) : 비지니스 관련된 Bean
--WebMvcContextConfiguration.class : 웹과 관련된 Bean
+- ApplicationConfig.class(부모설정) : 비지니스 관련된 Bean
+- WebMvcContextConfiguration.class : 웹과 관련된 Bean
+
+
 4.  ApplicationConfig.class
-: 기존 dao, service사용하는 설정
+: 기존 dao, service 사용하는 설정
+
+
 5.  WebMvcContextConfiguration.class
-- 보통 웹을 설정할 때에는 WebMvcConfigurerAdapter 를 상속받아서 만든다.(우리는 4.대 기준 이것을 사용)
+- 보통 웹을 설정할 때에는 WebMvcConfigurerAdapter 를 상속받아서 만든다.(우리는 4.대 기준, 이것을 사용)
 - 하지만 Spring 5, Spring Boot 2에서는 WebMvcConfigurer 인터페이스를 구현해서 작성한다.
 - WebMvcConfigurerAdapter나 WebMvcConfigurer가 가지고 있는 메소드를 오버라이딩해서, Web과 관련된 설정을 하게 된다.
+
 ===보통 아래와 같이 만든다.===
-@Configuration // Java Config
-@EnableWebMvc // 자동으로 Spring MVC에대한 설정
+@Configuration  // Java Config
+@EnableWebMvc   // 자동으로 Spring MVC에 대한 설정을 해준다.
 @ComponentScan(basePackages = { "examples.daoexam.controller"})
 public class WebMvcContextConfiguration extends WebMvcConfigurerAdapter {
  // 필요한 기능이 있다면 Bean을 생성하거나 메소드를 오버라이딩하여 설정

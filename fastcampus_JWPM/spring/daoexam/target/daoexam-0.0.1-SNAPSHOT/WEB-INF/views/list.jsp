@@ -6,13 +6,12 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>List</title>
+    <title>list</title>
 </head>
 <body>
-<h1>List</h1>
+<h1>list</h1>
 <br>
 
-<%-- 한 건씩 읽어서 보여주기 위함 --%>
 <c:forEach items="${boards}" var="board">
     ${board.title}<br>
 </c:forEach>
@@ -21,3 +20,4 @@
 <a href="/boards/writeform">글쓰기</a>
 </body>
 </html>
+
