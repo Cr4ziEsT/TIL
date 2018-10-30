@@ -78,8 +78,8 @@ public class WebMvcContextConfiguration extends WebMvcConfigurerAdapter {
 
 
 // 정적 데이터를 외부에 어떤 path로 제공할 것이냐하는 설정을 한다.(addResourceHandlers)
-// src/main/webapp/img/github.gif 가 있을 경우 아래와 같이 설정하면
-// <img src="/images/github.gif">
+// src/main/webapp/img/github.gif 가 있을 경우 아래와 같이 설정하면 된다.
+// <img src="/images/github.gif"> 아래와 같이 설정했을 경우의 jsp 태그 설정
 
 
     @Override
@@ -89,6 +89,7 @@ public class WebMvcContextConfiguration extends WebMvcConfigurerAdapter {
         registry.addResourceHandler("/images/**").addResourceLocations("/img/").setCachePeriod(31556926);
         registry.addResourceHandler("/js/**").addResourceLocations("/js/").setCachePeriod(31556926);
      }
+
 //    /(root) 요청은 WAS가 가지고 있는 DefaultServlet이 처리한다.
 //    Dispatcher서블릿이 Controller 를 호출해서 url을 처리하는데 요청받은 url을 처리할 Controller가 없으면
 //    DefaultServlet에게 해당 url을 처리해달라고 요청한다.
@@ -96,14 +97,15 @@ public class WebMvcContextConfiguration extends WebMvcConfigurerAdapter {
  public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
      configurer.enable();
  }
-
-
-// ViewResolver를 설정.(InternalResourceViewResolver를 리턴해준다.)
-// InternalResourceViewResolver 는 ViewResolver중에 한가진데 어떤 JSP를 사용할지 전략을 세워준다.(jsp를 보여주기 위한 resolver)
-// ex) 사용자가 Controller에서 view name(ex : "list")을 리턴하면, Dispatcher서블릿은
-// ViewResolver에게 해당 view name을 통하여 어떤 View를 사용할지 물어보게 되어 있다.
-// "/WEB-INF/views/" + view name + ".jsp" 라는 경로의 jsp를 사용하도록 하겠다. 결정을 한다.
-// 해당 정보를 이용하여 내부적으로 JstlView라는 객체를 생성하여 jsp를 보여주게 된다.
+/*
+이제까지는 오버라이딩해서 설정을 했는데 이번에는 Bean을 설정해준다.(ViewResolver 설정)
+ViewResolver를 설정.(InternalResourceViewResolver를 리턴해준다.)
+InternalResourceViewResolver 는 ViewResolver중에 한 가지인데 어떤 JSP를 사용할지 전략을 세워준다.(jsp를 보여주기 위한 resolver)
+ex) 사용자가 Controller에서 view name(ex : "list")을 리턴하면, Dispatcher서블릿은
+ViewResolver에게 해당 view name을 통하여 어떤 View를 사용할지 물어보게 되어 있다.
+"/WEB-INF/views/" + view name + ".jsp" 라는 경로의 jsp를 사용하도록 하겠다고 결정을 해준다. ("프리픽스" + viewname + "서브픽스") -> 다른 폴더에 설정을 할 수도 있다.
+이렇게 jsp가 결정이 되면 해당 정보를 이용하여 내부적으로 JstlView라는 객체를 생성하여 jsp를 보여주게 된다.
+*/
     @Bean
     public InternalResourceViewResolver getInternalResourceViewResolver() {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
@@ -111,3 +113,6 @@ public class WebMvcContextConfiguration extends WebMvcConfigurerAdapter {
         resolver.setSuffix(".jsp");
         return resolver;
     }
+
+----
+이후 WebMvcContextConfiguration 설명, index.jsp 생성, BoardController 생성,

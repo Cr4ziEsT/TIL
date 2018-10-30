@@ -35,12 +35,12 @@ public class BoardServiceImpl implements BoardService {
         return board;
     }
 
-    // 읽기 전용 메소드
+
     // start : 시작 id
     // limit : 읽어올 수
     @Override
-    @Transactional(readOnly = true)
+    @Transactional(readOnly = true) // 읽기 전용 메소드
     public List<Board> getBoards(int start, int limit) {
-        return null;
+        return boardDao.getBoards();
     }
 }

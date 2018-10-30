@@ -12,7 +12,7 @@
 <h1>Test</h1>
 <br>
 
-<a href="/boards">게시판</a><br><br>
+<a href="/boards">게시판</a><br><br>   <!-- /boards를 처리하기 위해 BoardController라는 클래스 생성 -->
 <img src="/images/github.gif">
 </body>
 </html>

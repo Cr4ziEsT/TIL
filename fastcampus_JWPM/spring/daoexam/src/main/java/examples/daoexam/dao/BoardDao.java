@@ -105,6 +105,7 @@ public class BoardDao {
         try{
             RowMapper<Board> rowMapper = BeanPropertyRowMapper.newInstance(Board.class);
             return jdbc.query(sql, rowMapper);      // .query는 여러건 조회하는 것 (List를 반환)
+            // sql이 실행되고 파라미터가 없으므로 rowMapper에 의해 작성된 매핑정보로 매핑만 해준다.
         }catch(Exception ex){
             return null;
         }
