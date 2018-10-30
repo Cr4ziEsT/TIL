@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <!-- web.xml : was가 실행될때 이 설정 파일을 읽어들인다. -->
+    <!-- Web Application이 배포가 될 때 읽어들이는 설정 파일이라고 해서 배포 기술자(Deployment Descripter) 라고도 한다. -->
+    <!-- 웹 어플리케이션이 와스에 배포되면 와스는 web.xml 파일을 가장 먼저 읽어들이는데 여기에 리스너를 설정할 수 있다.(스프링이 만들어 놓은) -->
+    <!-- 와스가 제공해주는 기능 중 리스너라는 것이 있는데 그 리스너를 스프링이 만들어주었다. 리스너는 와스가 처음 실행될 때 리스너 객체가 초기화가 되는데 이 안에 어플리케이션 컨택스트를 갖고 있따. -->
+
+
+    <display-name>Spring JavaConfig Sample</display-name>
+    <context-param> <!-- context-param :listener의 설정 , DAO, Service와 관련된 비지니스 로직에 관련된 설정을 읽어들이는 설정(부모) -->
+        <param-name>contextClass</param-name>   <!-- 내부적으로 Application Context를 갖고 있으며 이것이 xml 설정 파일을 읽어들일 수도 있고 자바 컨피그를 읽을 수 도 있다. -->
+        <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>    <!-- 자바 컨피그를 읽어들이게 하고 싶으면 AnnotationConfigWebApplicationContext로 바꾸어 주어야 한다. default는 web.xml 설정을 읽어들인다. -->
+    </context-param>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>  <!--파라미터 이름은 스프링이 만든 사람이 정해놓았음-->
+        <param-value>examples.daoexam.config.ApplicationConfig</param-value>    <!--바로 위의 설정이 읽어들이는 설정 파일을 등록하는 것(내가 만든 클래스 파일) -->
+    </context-param>
+
+    <listener>  <!-- spring이 제공해주는 클래스를 등록, ContextLoaderListener: 부모의 웹 어플리케이션 context를 갖고 있음 -->
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+
+    <!-- servlet 부터 /servlet-mapping 까지 하나의 서블릿 설정을 하는 것(둘이 서로 짝꿍, 서블릿 이름을 보고 알 수 있다.) -->
+    <servlet>
+        <servlet-name>mvc</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextClass</param-name>       <!-- 역시 설정의 이름은 만든 사람이 미리 정해둔 것이다. -->
+            <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>    <!-- 자바 컨피그를 읽어들이기 위함 -->
+        </init-param>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>examples.daoexam.config.WebMvcContextConfiguration</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>mvc</servlet-name>
+        <url-pattern>/</url-pattern>    <!-- url mapping이 / : /라는 요청은 DispatcherServlet가 처리함을 나타냄 -->
+    </servlet-mapping>
+    <!-- / 한 요청이란 모든 요청을 말한다. -->
+    <!-- 하지만 /라는 요청을 WAS에서는 이미 처리해주는 것이 존재한다.  그것이 Default Servlet 이며 이미지나 css 파일을 보여주는 역할을 수행한다. -->
+    <!-- 그런데 DispatcherServlet이 /를 대신 처리하게 되면 default servlet이 안 사용되고 그렇게되면 이미지나 css 파일을 보여주지 못 할 수 있다.-->
+    <!-- 그래서 DispatcherServlet을 만든 사람은 모든 요청이 오면 먼저 DispatcherServlet이 받고 그 요청을 처리해주고 Controller를 찾는다. 그런데 이때 Controller 중에 요청받은 기능을 하는게 없다면 기존 Default Servlet에게 요청을 넘기도록 했다.(따로 설정을 해줘야 함, WebMvcContextConfiguration.class에서 configureDefaultServletHandling를 오버라이드 해서 구현해놓음) -->
+</web-app>
