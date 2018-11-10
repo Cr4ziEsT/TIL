@@ -3,7 +3,11 @@ package examples.daoexam.config;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.jdbc.datasource.init.DatabasePopulator;
+import org.springframework.jdbc.datasource.init.DatabasePopulatorUtils;
+import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
@@ -35,8 +39,15 @@ public class DBConfig {
         dataSource.setUrl(url);
         dataSource.setUsername(username);
         dataSource.setPassword(password);
+        DatabasePopulatorUtils.execute(createDatabasePopulator(), dataSource);  // Junit을 위한 데이터베이스 설정
         return dataSource;  // DataSource 는 Interface 이다. 따라서 BasicDataSource 라는 DataSource 를 구현하고 있는 객체를 리턴한다.
     }
 
-
+    // Junit을 위한 데이터베이스 설정 schema.sql 파일을 Junit이 실행될때마다 실행한다.
+    private DatabasePopulator createDatabasePopulator(){
+        ResourceDatabasePopulator databasePopulator = new ResourceDatabasePopulator();
+        databasePopulator.setContinueOnError(true);
+        databasePopulator.addScript(new ClassPathResource("schema.sql"));
+        return databasePopulator;
+    }
 }
