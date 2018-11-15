@@ -3,7 +3,6 @@ package examples.boot.malljpa.domain;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -17,18 +16,12 @@ public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(length = 45)
+    @Column(length = 45, nullable = false)
     private String name;
-    @Column
-    @CreationTimestamp
     private LocalDateTime startDate;
-    @UpdateTimestamp
     private LocalDateTime endDate;
-    private boolean status;
+    private boolean isProgress;
 
-    @ManyToMany
-    @JoinTable(name = "event_goods",
-                joinColumns = @JoinColumn(name = "event_id", referencedColumnName = "id"),
-                inverseJoinColumns = @JoinColumn(name = "goods_id", referencedColumnName = "id"))
-    private Set<Goods> goods;
+    @ManyToMany(mappedBy = "events")
+    private Set<Item> items;
 }

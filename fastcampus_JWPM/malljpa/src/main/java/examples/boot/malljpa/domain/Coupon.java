@@ -4,8 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Date;
-import java.util.Set;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "coupon")
@@ -15,13 +14,9 @@ public class Coupon {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(length = 45, nullable = false)
+    @Column(length = 50, nullable = false)
     private String name;
-    private int discount;
-    private Long discountRate;
-    @Column(nullable = false)
-    private Date expiration;
-
-    @OneToMany(mappedBy = "coupon")
-    private Set<MemberCoupon> memberCoupons;
+    private int discountMoney;
+    private Double discountRate;
+    private LocalDateTime expirationDate;
 }

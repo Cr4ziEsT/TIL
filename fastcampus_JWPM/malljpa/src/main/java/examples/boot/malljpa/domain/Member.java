@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Date;
 import java.util.Set;
 
 @Entity
@@ -13,42 +12,45 @@ import java.util.Set;
 @Setter
 public class Member {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // 기본키 생성을 DB에 맡긴다.
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(length = 45, nullable = false)
+    @Column(length = 50, nullable = false, unique = true)
     private String email;
-    @Column(length = 20, nullable = false)
+    @Column(length = 50, nullable = false)
     private String name;
-    @Column(length = 45, nullable = false, unique = true)
-    private String alias;
-    @Column(length = 45, nullable = false)
+    @Column(length = 50, nullable = false, unique = true)
+    private String nickname;
+    @Column(length = 50, nullable = false)
     private String password;
-    @Column(length = 13, nullable = false)
-    private String phoneNumber;
-    @Column(length = 45, nullable = false)
-    private String address;
-    @Column(length = 45, nullable = false)
-    private String postalCode;
-    private Long height;
-    private Long weight;
-    @Column(nullable = false)
-    private Date birthDate;
+    @Column(length = 15, nullable = false)
+    private String phoneNum;
+    @Column(length = 50, nullable = false)
+    private String homeAddress;
+    @Column(length = 50, nullable = false)
+    private String zipCode;
+    private Double height;
+    private Double weight;
+    private String gender;
+    @Column(length = 50, nullable = false)
+    private String birthDay;
     private int point;
-
-    @ManyToOne
-    @JoinColumn(name = "rating_id")
-    private Rating rating;
 
     @OneToMany(mappedBy = "member")
     private Set<MemberCoupon> memberCoupons;
 
     @OneToMany(mappedBy = "member")
-    private Set<Attention> attentions;
+    private Set<CartItem> cartItems;
 
     @OneToMany(mappedBy = "member")
-    private Set<OrderInfo> orderInfos;
+    private Set<Ordering> orderings;
 
-    @OneToOne
-    @JoinColumn(name = "cart_id")
-    private Cart cart;
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    private Role role;
+
+    @ManyToMany
+    @JoinTable(name = "member_item",
+            joinColumns = @JoinColumn(name = "member_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "item_id", referencedColumnName = "id"))
+    private Set<Item> items;
 }

@@ -6,7 +6,7 @@ public class MemberCouponId implements Serializable {
     private Long member;
     private Long coupon;
 
-    public MemberCouponId(Long memberId, Long couponId){
+    public MemberCouponId(Long member, Long coupon){
         this.member = member;
         this.coupon = coupon;
     }

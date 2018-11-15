@@ -4,20 +4,20 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
-@Table(name = "category")
+@Table(name = "claim")
 @Getter
 @Setter
-public class Category {
+public class Claim {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(length = 45, nullable = false)
-    private String name;
+    private String type;
+    @Column(length = 45, nullable = false)
+    private String cause;
 
-    @OneToMany(mappedBy = "category")
-    private Set<Item> items;
+    @OneToOne(mappedBy = "claim")
+    private OrderingItem orderingItem;
 }
-

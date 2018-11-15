@@ -1,5 +1,6 @@
 package examples.boot.malljpa.domain;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,6 +12,8 @@ import javax.persistence.*;
 @Getter
 @Setter
 public class MemberCoupon {
+    private int count;
+
     @Id
     @ManyToOne
     @JoinColumn(name = "member_id")
@@ -20,6 +23,4 @@ public class MemberCoupon {
     @ManyToOne
     @JoinColumn(name = "coupon_id")
     private Coupon coupon;
-
-    private boolean availability;
 }

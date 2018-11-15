@@ -4,18 +4,15 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
-@Table(name = "rating")
+@Table(name = "role")
 @Getter
 @Setter
-public class Rating {
+public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String rating;
-
-    @OneToMany(mappedBy = "rating")
-    private Set<Member> members;
+    @Column(length = 50, nullable = false)
+    private String name;
 }
