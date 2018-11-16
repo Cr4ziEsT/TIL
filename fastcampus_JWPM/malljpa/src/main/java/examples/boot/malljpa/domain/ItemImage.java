@@ -16,4 +16,8 @@ public class ItemImage {
     @Column(length = 255)
     private String fileName;
     private Double fileSize;
+
+    @ManyToOne
+    @JoinColumn(name = "item_id")
+    private Item item;
 }

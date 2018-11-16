@@ -49,7 +49,7 @@ public class Member {
     private Role role;
 
     @ManyToMany
-    @JoinTable(name = "member_item",
+    @JoinTable(name = "wish_item",
             joinColumns = @JoinColumn(name = "member_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "item_id", referencedColumnName = "id"))
     private Set<Item> items;

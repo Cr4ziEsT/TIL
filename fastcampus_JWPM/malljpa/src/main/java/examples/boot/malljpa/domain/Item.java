@@ -30,8 +30,7 @@ public class Item {
     private int maxOrderNum;
     private int point;
 
-    @OneToMany
-    @JoinColumn(name = "item_image")
+    @OneToMany(mappedBy = "item")
     private List<ItemImage> itemImages;
 
     @ManyToOne
