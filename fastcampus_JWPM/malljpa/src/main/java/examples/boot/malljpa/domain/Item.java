@@ -33,7 +33,7 @@ public class Item {
     @OneToMany(mappedBy = "item")
     private List<ItemImage> itemImages;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
     private Category category;
 

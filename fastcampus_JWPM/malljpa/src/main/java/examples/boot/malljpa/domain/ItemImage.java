@@ -17,7 +17,7 @@ public class ItemImage {
     private String fileName;
     private Double fileSize;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "item_id")
     private Item item;
 }

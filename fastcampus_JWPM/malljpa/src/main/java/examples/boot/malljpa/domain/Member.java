@@ -44,7 +44,7 @@ public class Member {
     @OneToMany(mappedBy = "member")
     private Set<Ordering> orderings;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "role_id")
     private Role role;
 

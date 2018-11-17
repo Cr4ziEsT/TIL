@@ -26,7 +26,7 @@ public class Ordering {
     @CreationTimestamp
     private LocalDateTime orderDate;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private Member member;
 
