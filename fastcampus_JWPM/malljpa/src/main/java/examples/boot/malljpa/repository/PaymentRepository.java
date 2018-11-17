@@ -1,4 +1,7 @@
 package examples.boot.malljpa.repository;
 
-public class PaymentRepository {
+import examples.boot.malljpa.domain.Payment;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PaymentRepository extends JpaRepository<Payment, Long> {
 }
