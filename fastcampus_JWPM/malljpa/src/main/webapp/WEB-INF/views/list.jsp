@@ -11,10 +11,7 @@
 <body>
 <h1>list</h1>
 <br>
-
-<c:forEach items="${items}" var="item">
-    ${item}<br>
-</c:forEach>
+<img src="/images/spring4.0.jpg">
 <br>
 
 </body>
