@@ -27,6 +27,8 @@ public class Item {
     @Column
     @Lob
     private String explanation;
+    @Column(length = 255)
+    private String mainImagePath;
     private int maxOrderNum;
     private int point;
 

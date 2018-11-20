@@ -20,7 +20,7 @@ public class Member {
     private String name;
     @Column(length = 50, nullable = false, unique = true)
     private String nickname;
-    @Column(length = 50, nullable = false)
+    @Column(length = 255, nullable = false)
     private String password;
     @Column(length = 15, nullable = false)
     private String phoneNum;
@@ -44,9 +44,11 @@ public class Member {
     @OneToMany(mappedBy = "member")
     private Set<Ordering> orderings;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "role_id")
-    private Role role;
+    @ManyToMany
+    @JoinTable(name = "member_role",
+            joinColumns = @JoinColumn(name = "member_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
+    private Set<Role> roles;
 
     @ManyToMany
     @JoinTable(name = "wish_item",

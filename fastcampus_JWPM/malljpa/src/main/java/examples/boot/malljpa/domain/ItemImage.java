@@ -15,7 +15,10 @@ public class ItemImage {
     private Long id;
     @Column(length = 255)
     private String fileName;
-    private Double fileSize;
+    @Column(length = 255)
+    private String fileSize;
+    @Column(length = 255)
+    private String filePath;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "item_id")
