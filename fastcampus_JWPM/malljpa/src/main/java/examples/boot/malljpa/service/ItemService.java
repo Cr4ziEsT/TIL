@@ -10,4 +10,5 @@ public interface ItemService {
 //    Page<Item> getItemListSearch(ItemSearch itemSearch);
     Page<Item> getMainItemList(Pageable pageable);
     Item getItem(Long itemId);
+    List<Item> getItemList();
 }

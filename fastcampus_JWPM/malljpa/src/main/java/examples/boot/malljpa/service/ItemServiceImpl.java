@@ -26,4 +26,10 @@ public class ItemServiceImpl implements ItemService{
     public Item getItem(Long itemId) {
         return itemRepository.getItem(itemId);
     }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<Item> getItemList(){
+        return itemRepository.findAll();
+    }
 }

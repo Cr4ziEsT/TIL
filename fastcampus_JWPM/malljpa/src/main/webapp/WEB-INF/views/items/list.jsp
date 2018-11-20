@@ -27,8 +27,8 @@
             <c:if test="${i%j == 0}"> <tr> </c:if>
 
                 <td align="center">
-                    <a href="items"+${item.id}><img src="${item.mainImagePath}" width="200" height="300"></a>
-                    <a href="items"+${item.id}><h3 align="center">${item.name}</h3></a>
+                    <a href="items/${item.id}"><img src="${item.mainImagePath}" width="200" height="300"></a>
+                    <a href="items/${item.id}"><h3 align="center">${item.name}</h3></a>
                     <h4 align="center">${item.money}¿ø</h4>
                 </td>
             <c:if test="${i%j == j-1}"> </tr> </c:if>
