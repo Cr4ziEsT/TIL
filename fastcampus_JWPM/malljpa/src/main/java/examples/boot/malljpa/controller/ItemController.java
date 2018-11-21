@@ -1,10 +1,13 @@
 package examples.boot.malljpa.controller;
 
 import examples.boot.malljpa.domain.Item;
+import examples.boot.malljpa.paging.PageMaker;
 import examples.boot.malljpa.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,6 +27,12 @@ public class ItemController {
     public String GetItemList(ModelMap modelMap) throws Exception{
         List<Item> items = itemService.getItemList();
         modelMap.addAttribute("items", items);
+        return "items/list";
+    }
+
+    @GetMapping("/page")
+    public String GetItemListPage(ModelMap modelMap) throws Exception{
+        PageRequest pageRequest = new PageRequest(0, 10);
         return "items/list";
     }
 

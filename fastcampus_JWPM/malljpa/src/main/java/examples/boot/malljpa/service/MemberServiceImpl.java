@@ -16,4 +16,10 @@ public class MemberServiceImpl implements MemberService {
     public Member getMember(String email) {
         return memberRepository.getMember(email);
     }
+
+//    @Override
+//    @Transactional
+//    public int addMember(Member member){
+//        return memberRepository.
+//    }
 }
