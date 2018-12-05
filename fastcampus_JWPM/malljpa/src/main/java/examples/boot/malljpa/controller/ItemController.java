@@ -31,8 +31,9 @@ public class ItemController {
     }
 
     @GetMapping("/page")
-    public String GetItemListPage(ModelMap modelMap) throws Exception{
-        PageRequest pageRequest = new PageRequest(0, 10);
+    public String GetItemListPage(ModelMap modelMap, Pageable pageable) throws Exception{
+        Page<Item> itemPage = itemService.getMainItemList(pageable);
+        modelMap.addAttribute("items", itemPage.getContent());
         return "items/list";
     }
 

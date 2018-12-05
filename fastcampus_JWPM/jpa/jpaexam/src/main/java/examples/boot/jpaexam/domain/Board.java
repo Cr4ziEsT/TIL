@@ -27,19 +27,23 @@ public class Board {
     private int readCount;
     // now()
     @Column
-    @CreationTimestamp
+    @CreationTimestamp              // Entity에서 db에 있는 시간이 저장되게 하기 위함
     private LocalDateTime regDate;
     @Column
     @UpdateTimestamp
     private LocalDateTime updateDate;
+
+    // WAS 안에 있는 시간이 저장된다.
+//    public Board(){
+//        regDate = LocalDateTime.now();
 }
 
 /*
 @Entity
-JPA에 있는 EntityManager에게 Board를 영속성(<->휘발성) 부여를 부탁
+JPA에 있는 EntityManager에게 Board를 영속성(<->휘발성) 부여를 부탁받은 객체
 
 영속성을 부여받은 객체는 @Entity, 클래스와 관계를 맺을 테이블에는 @Table(name = "sunny_board")
-식별자 칼럼에는 @Id를 붙여준다.(자동으로 생성되게 할려면 @GeneratedValue(strategy = GenerationType.IDENTITY)
+식별자 칼럼에는 @Id를 붙여준다.(자동으로 생성되게 하려면 @GeneratedValue(strategy = GenerationType.IDENTITY)
 
 direlat
 1차 캐시 -> JPA를 사용하면 성능이 좋은 이유, 같은 트랜잭션 안에서, 언제는 인설트가 바로 일어나고 언제는 끝날때 일어나고
