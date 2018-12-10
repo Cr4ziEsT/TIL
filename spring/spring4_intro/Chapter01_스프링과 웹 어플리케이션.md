@@ -9,7 +9,7 @@
     1. 정적 콘텐츠 : 클라이언트 머신의 웹 브라우저가 네트워크에 있는 웹 서버로부터 요청한 HTML을 읽어와 표시
     2. 동적 콘텐츠 : 웹 서버에서 애플리케이션 서버(웹 서버의 요구에 따라서 콘텐츠를 동적으로 생성하는 서버)에 처리를 요청하고 대부분은 RDB에서 데이터를 읽어오거나 가공하고 그 처리 결과를 웹 서버에서 받아 웹 브라우저에 표시
 
-    ![WWW의 구조](https://github.com/Kim-JunHyeong/TIL/tree/develop/spring/spring4_%EC%9E%85%EB%AC%B8/images/001.png)
+    ![WWW의 구조](https://github.com/Kim-JunHyeong/TIL/tree/develop/spring/spring4_intro/images/001.png)
 
     3. 현재는 Ajax로 웹 브라우저에 풍부한 화면을 구현할 수 있으며 RDB 대신 KVS(Key Value Store, Key에 의한 Value[데이터]를 저장/관리하는 방식])을 사용하고 클라이언트가 스마트폰인 경우도 많으며 인터넷상의 서비스(ex. 메일 or SNS)로 존재할 때도 있지만 기본적인 동작은 위와 동일
 
@@ -17,7 +17,7 @@
 
     1. 여러 사용자가 인터넷을 통해 데이터베이스에 접근하고 안전하게 정보를 읽고 쓸 수 있게 마만들어진 , 웹 브라우저와 RDB를 이용한 애플리케이션(티켓 및 상품 예약 시스템, 수주/발주 시스템 등)
 
-    ![웹 애플리케이션](https://github.com/Kim-JunHyeong/TIL/tree/develop/spring/spring4_%EC%9E%85%EB%AC%B8/images/002.png)
+    ![웹 애플리케이션](https://github.com/Kim-JunHyeong/TIL/tree/develop/spring/spring4_intro/images/002.png)
 
     2. 다음과 같은 동작을 반족
        1. 웹 브라우저에서 버튼을 클릭
@@ -25,7 +25,7 @@
        3. 처리 결과를 전송
        4. 웹 브라우저에 표시
 
-       ![웹 애플리케이션의 동작](https://github.com/Kim-JunHyeong/TIL/tree/develop/spring/spring4_%EC%9E%85%EB%AC%B8/images/003.png)
+       ![웹 애플리케이션의 동작](https://github.com/Kim-JunHyeong/TIL/tree/develop/spring/spring4_intro/images/003.png)
 
     3. 주의해야 할 점 : 처리 결과를 전송한 후 접속(세션)이 끊어져버리는 것으로 **상태를 저장할 수 없다**는 것!
 
@@ -61,7 +61,7 @@
       2. 세션 관리를 해줌
       3.  JSP로 페이지를 생성하고 비지니스 로직을 Servlet으로 처리
 
-      ![JSP&Servlet과 웹 컨테이너](https://github.com/Kim-JunHyeong/TIL/tree/develop/spring/spring4_%EC%9E%85%EB%AC%B8/images/004.png)
+      ![JSP&Servlet과 웹 컨테이너](https://github.com/Kim-JunHyeong/TIL/tree/develop/spring/spring4_intro/images/004.png)
 
 - EJB의 등장과 쇠퇴
 
@@ -76,7 +76,7 @@
 
     **이처럼  분산 환경을 위한 컴포넌트로 등장, JSP/Servlet와 같은 웹 애플리케이션을 위한 기술은 아니였음!**
 
-  ![EJB의 등장](https://github.com/Kim-JunHyeong/TIL/tree/develop/spring/spring4_%EC%9E%85%EB%AC%B8/images/005.png)
+  ![EJB의 등장](https://github.com/Kim-JunHyeong/TIL/tree/develop/spring/spring4_intro/images/005.png)
 
   - EJB의 오해
 
@@ -102,7 +102,7 @@
   >
   >  POJO는 DI 컨테이너에 의존하지 않아 단위 테스트를 쉽게 수행하지만 EJB 컴포넌트는 단위 테스트를 수행하기 어려움
 
-![JAVA Enterprise의 역사](https://github.com/Kim-JunHyeong/TIL/tree/develop/spring/spring4_%EC%9E%85%EB%AC%B8/images/000.png)
+![JAVA Enterprise의 역사](https://github.com/Kim-JunHyeong/TIL/tree/develop/spring/spring4_intro/images/000.png)
 
 
 
@@ -135,4 +135,4 @@
     - 사용자의 요구가 변하기 쉽기 때문!
     - 웹 애플리케이션의 생명 주기는 웹 애플리케이션이 폐기될 때까지
 
-    ![웹 애플리케이션의 생명 주기](https://github.com/Kim-JunHyeong/TIL/tree/develop/spring/spring4_%EC%9E%85%EB%AC%B8/images/006)
+    ![웹 애플리케이션의 생명 주기](https://github.com/Kim-JunHyeong/TIL/tree/develop/spring/spring4_intro/images/006)
