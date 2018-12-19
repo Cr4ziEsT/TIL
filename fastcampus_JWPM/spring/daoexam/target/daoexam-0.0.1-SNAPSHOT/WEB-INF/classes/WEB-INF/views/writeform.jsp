@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="EUC-KR" isELIgnored="false"%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -12,10 +12,11 @@
 <h1>writeform</h1>
 <br>
 
-<form method="post" action="/boards">
+<form method="post" action="/boards" enctype="multipart/form-data">
     name : <input type="text" name="name"><br>
     title : <input type="text" name="title"><br>
-    content : <textarea name="content" cols="50" rows="6"></textarea>
+    content : <textarea name="content" cols="50" rows="6"></textarea><br>
+    <input type="file" name="file"/>
     <br>
     <input type="submit">
 </form>

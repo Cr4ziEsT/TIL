@@ -62,7 +62,7 @@ public class BoardDao {
     }
 
     public int deleteBoard(Long id){
-        String sql = "DELETE FROM board WHWER id=:id";
+        String sql = "DELETE FROM board WHERE id=:id";
         Map<String, Long> map = new HashMap<>();
         map.put("id", 1L);
         return jdbc.update(sql, map);
@@ -110,4 +110,15 @@ public class BoardDao {
             return null;
         }
     }
+    /*
+    create table board (
+    id BIGINT AUTO_INCREMENT,
+    title VARCHAR(255),
+    name VARCHAR(255),
+    content TEXT,
+    regdate DATETIME,
+    read_count int(11),
+    PRIMARY KEY (id)
+    );
+    */
 }

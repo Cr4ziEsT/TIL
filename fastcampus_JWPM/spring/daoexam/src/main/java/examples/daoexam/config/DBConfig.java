@@ -19,7 +19,7 @@ public class DBConfig {
     // ConnectionPool 은 커넥션을 미리 연결해서 가지고 있는 객체이다.
     // 따라서 ConnectionPool 은 DB에 접속할 수 있는 설정이 있어야 한다.
     private String driverClassName = "com.mysql.jdbc.Driver";
-    private String url = "jdbc:mysql://localhost:3306/mysql";
+    private String url = "jdbc:mysql://localhost:3306/fastcampus?useSSL=false&verifyServerCertificate=TRUE&requireSSL=FALSE&serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8";
     private String username = "crazy";
     private String password = "1234";
 
