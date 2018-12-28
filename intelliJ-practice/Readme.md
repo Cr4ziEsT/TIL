@@ -6,4 +6,4 @@
 
 ### List
 
-- [IntelliJ_Guide]()
+- [IntelliJ_Guide](https://github.com/Kim-JunHyeong/TIL/tree/develop/intelliJ-practice/IntelliJ_Guide)
