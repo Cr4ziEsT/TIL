@@ -7,6 +7,7 @@ public class Main2 {
         // Shift + F10
         // 이런 과거의 실행했던 정보를 저장하고 있는 것은 우측 상단의 start configuration 에서 설정 할 수 있으며, 자바 말고도 다른 것도 추가할 수 있다.
         Main main = new Main();
+
     }
 }
 
