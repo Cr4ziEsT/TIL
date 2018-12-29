@@ -1,6 +1,6 @@
-# IntelliJ-Practice
+# IntelliJ
 
-- IntelliJ 단축키를 정리
+- IntelliJ 활용에 필요한 내용을 정리
 
 
 
