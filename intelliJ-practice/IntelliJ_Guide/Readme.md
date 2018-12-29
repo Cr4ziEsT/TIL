@@ -126,82 +126,99 @@
 
 ### 검색 - 텍스트
 
-1. 현재 파일에서 검색
-   Ctrl + F
-2. 현재 파일에서 교체
-   Ctrl + R(위의 창은 찾고자 하는 단어, 아래는 바꾸고자 하는 단어)
-   Replace 버튼 = 한번에 하나만, Replace All 버튼 = 한번에 모두
-3. 전체 파일에서 검색
-   Ctrl + Shift + F
-4. 전체 파일에서 교체
-   Ctrl + Shift + R
-5. 정규표현식으로 검색, 교체(HTML 파일에서 자주 쓰임)
-   Ctrl + Shift + F 에서 Regex 체크
-   Ctrl + Shfit + R 에서 교체
+- 현재 파일에서 검색
+  - ``Ctrl + F (Mac : Command + F)``
+
+- 현재 파일에서 교체
+  - ``Ctrl + R (Mac : Command + R)``
+  - 위의 창은 찾고자 하는 단어, 아래는 바꾸고자 하는 단어
+  - Replace 버튼 = 한번에 하나만, Replace All 버튼 = 한번에 모두
+
+- 프로젝트 전체에서 검색
+  ``Ctrl + Shift + F (Mac : Command + Shift + R) ``
+
+- 프로젝트 전체에서 교체
+  ``Ctrl + Shift + R (Mac : Command + Shift + R)``
+
+- 정규표현식으로 검색, 교체(HTML 파일에서 자주 쓰임)
+  - Ctrl + Shift + F 에서 ``Regex `` 체크
+  - Ctrl + Shfit + R 에서 교체
+  - [참고 블로그(창천향로님 블로그)](https://jojoldu.tistory.com/160)
 
 
 
 ### 검색 - 기타
 
-1. 파일 검색
-   Ctrl + Shift + N
-   클래스명 외에 패키지명을 같이 적어줄 수 있다.
-2. 메소드 검색
-   Ctrl + Shift + Alt + N
-3. Action 검색 (별표)
-   Ctrl + Shift + A
-   모든 이벤트와 옵션들을 검색할 수 있다.
-4. 최근 열었던 파일 목록 보기
-   Ctrl + E
-5. 최근 수정한 파일 목록 보기
-   Ctrl + Shift + E
+- 파일 검색
+  - ``Ctrl + Shift + N (Mac : Command + Shift + O)``
+  - 클래스명 외에 패키지명을 같이 적어줄 수 있다.
+  - ex) sp2라는 패키지 안에 있는 Member.java 파일을 찾고 싶다면 검색창에 ``sp2/Member`` 입력
+
+- 메소드 검색
+  - ``Ctrl + Shift + Alt + N (Mac : Command + Alt + O)``
+
+- Action 검색 ``중요``
+  - ``Ctrl + Shift + A (Mac : Command + Shift + A)``
+  - 인텔리제이의 모든 이벤트와 옵션들을 검색할 수 있다.
+
+- 최근 열었던 파일 목록 보기
+  - ``Ctrl + E (Mac : Command + E)``
+
+- 최근 수정한 파일 목록 보기
+  - ``Ctrl + Shift + E (Mac : Command + Shift + E)``
 
 
 
 ### 자동완성
 
-1. 스마트 자동 완성
-   ~~Ctrl + Space = 그냥 자동완성(모든 경우의 수를 다 보여줌)~~
-   Ctrl + Shift + Space 를 사용하자
-   메소드 내의 인자값을 넣을때도 사용할 수 있다.
+- 스마트 자동 완성
 
-2. 스태틱 메소드 자동 완성
-   Ctrl + Space + Space
+  - ~~일반적인 자동 완성 : ``Ctrl + Space (Mac : Ctrl + Space)~~``
+  - ``Ctrl + Shift + Space (Mac : Ctrl + Shift + Space)``
 
-3. getter/setter/생성자 자동 완성
-   Alt + Insert
+  - 메소드에 인자값을 넣을때도 사용할 수 있다.
 
-4. overriide 메소드 자동 완성
+- 스태틱 메소드 자동 완성
+  - ``Ctrl + Space + Space (Mac : Ctrl + Space + Space)``
 
-   Ctrl + I
+- Getter / Setter / 생성자 자동 완성
+  - ``Alt + Insert (Mac : Command + N)``
+
+- Overriide 메소드 자동 완성
+  - ``Ctrl + I (Mac : Ctrl + I)``
 
 
 
 ### Live Template
 
-1. Live Template 소개
-   psvm, sout ... 지정된 코드를 자동으로 만들어주는 기능
-   ifn = if문 자동 완성
-2. Live Template 목록 보기
-   Ctrl + J
-3. Live Template 추가하기(보통 ORM에서 많이 씀 ent)
-   1. Ctrl + Shift + A 를 눌러 Live Template 검색
-   2. other 에서 우측의 ``+`` 버튼을 누른다.
-   3. 어디서 쓸 수 있을지 선택해준다. Define
+- Live Template 소개
+  - ``psvm``, ``sout``, ``ifn`` 등 지정된 코드를 자동으로 만들어주는 기능
+
+- Live Template 목록 보기
+  - ``Ctrl + J (Mac : Command + J)``
+
+- Live Template 추가하기(보통 ORM에서 많이 씀 ent)
+  - ``Ctrl + Shift + A`` 를 눌러 ``Live Template`` 검색
+
+  - other 에서 우측의 ``+`` 버튼을 누른다.
+  - Abbreviation : 축약어 입력, Description : 설명, Template Text : 적용할 코드 입력
+  - ``Define`` : 어디서 쓸 수 있을지 선택해준다. Java에서만 사용하므로 Java 선택
 
 
 
 ### 리펙토링 - Extract(추출하기)
 
-1. 변수 추출하기(Extract Variable 이라고 함)
-   Ctrl + Alt + V
-   동일한 변수에 대해서 하나의 변수로 뽑을 수 있다.
-2. 파라미터 추출하기
-   Ctrl + Alt + P
-3. 메소드 추출하기
-   Ctrl + Alt + M
-4. 이너클래스 추출하기
-   클래스를 밖으로 뽑을 수 있다.
-   F6
-   이너클래스를 공용의 클래스로 사용해야 될 경우 사용하기에 편리하다.
+- 변수 추출하기(Extract Variable 이라고 함)
+  - ``Ctrl + Alt + V (Mac : Command + Option + V)``
+  - 동일한 변수에 대해서 하나의 변수로 뽑을 수 있다.
+
+- 파라미터 추출하기
+  - ``Ctrl + Alt + P (Mac : Command + Option + P)``
+
+- 메소드 추출하기
+  - ``Ctrl + Alt + M (Mac : Command + Option + M)``
+
+- 이너클래스 추출하기, 이동하기
+  - 해당 이너 클래스명에 포커스를 두고 ``F6``
+  - 이너클래스를 공용의 클래스로 사용해야 될 경우 사용하기에 편리하다.
 
