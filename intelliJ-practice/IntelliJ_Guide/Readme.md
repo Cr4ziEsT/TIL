@@ -23,7 +23,7 @@
 
 - Mac OS와 Windows & Linux 는 서로 단축키가 다름
   - 개발 시 사용한 단축키를 MaxOS와 Windows & Linux 에서는 어떻게 쓰이는지 보여주는 플러그인 설치
-  - ``Ctrl + Shift + A`` > ``plugins`` > ``browse repo...`` > ``presentation assistent``  설치
+  - ``Ctrl + Shift + A`` > ``plugins`` > ``browse repositories`` > ``presentation assistent``  설치
 
 
 
@@ -59,7 +59,7 @@
 - 라인 합치기
   - 여러 줄에 걸쳐 만들어진 코드를 하나의 줄로 합치기
   - 문자열을 합치는 단위는 라인 단위
-  - ``Ctrl + Shift + J``
+  - ``Ctrl + Shift + J (Mac : Command + Shift + J)``
 
 - 라인 단위 옮기기 
   - 구문에 관계없이 이동 : ``Shift + Alt + Up/Down (Mac : Command(Option) + Shift + Alt + Up/Down)``
@@ -87,6 +87,8 @@
     - 마찬가지로 유료버전에서는 HTML에서도 사용할 수 있음(이때는 MDN의 내용이 보여짐)
 
 
+
+## 포커스
 
 ### 포커스 - 에디터
 
@@ -123,6 +125,8 @@
   - ``F2  (Mac : F2)``
 
 
+
+## 검색
 
 ### 검색 - 텍스트
 
@@ -169,6 +173,8 @@
 
 
 
+## 자동완성
+
 ### 자동완성
 
 - 스마트 자동 완성
@@ -206,6 +212,8 @@
 
 
 
+## 리펙토링
+
 ### 리펙토링 - Extract(추출하기)
 
 - 변수 추출하기(Extract Variable 이라고 함)
@@ -221,4 +229,138 @@
 - 이너클래스 추출하기, 이동하기
   - 해당 이너 클래스명에 포커스를 두고 ``F6``
   - 이너클래스를 공용의 클래스로 사용해야 될 경우 사용하기에 편리하다.
+
+
+
+### 리펙토링 기타
+
+- 동일한 이름 일괄 변경하기
+  - 변경하고자 하는 이름에 포커스를 두고 ``Shift + F6 (Mac : Shift + F6)``
+- 타입 일괄 변경하기
+  - ``Ctrl + Shift + F6 (Mac : Command + Shift + F6)``
+- Import 정리하기
+  - 파일 하나에서 직접 정리 : ``Ctrl + Alt + O (Mac : Ctrl + Option + O)``
+  - 파일을 열 때 자동으로 정리 : ``Ctrl + Alt + A`` -> ``optimize import on`` 검색 -> ``Auto Import 부분을 ON으로 변경``
+- 코드 자동 정렬하기
+  - ``Ctrl + Alt + L (Mac : Command + Option + L)``
+
+
+
+## 디버깅
+
+### 디버깅
+
+디버깅을 할 때에는 Line Number 가 보여야 편하므로 보이지 않는다면 우클릭 후 Show Line Number 선택
+
+Break Point 설정 : 해당 라인 클릭 or 포커스 라인에서 ``Ctrl + F8``
+
+- Debug 모드로 실행하기 - 즉시 실행
+  - ``Windows/Linux 단축키 없음 (Mac : Ctrl + Shift + D)``
+- Debug 모드로 실행하기 - 이전 실행
+  - ``Shift + F9 (Mac : Ctrl + D)``
+  - 상단 우측에 남아있는 이전에 실행했던 메소드 실행
+
+- Resume
+  - ``F9 (Mac : Command + Option + R)``
+  - 다음 브레이크 포인트로 넘어가기
+  - 좌측은 Call Stack 이라고 하며, 현재 브레이크 포인트까지 오기까지 어떤 메소드를 통해서 왔는지 알 수 있다.
+- Step Over
+  - `` F8 (Mac : F8)``
+  - 현재 브레이크 포인트에서 다음 한 줄 실행
+- Step Into
+  - ``F7 (Mac : F7)``
+  - 현재 브레이크 포인트의 다음 실행할 메소드 안으로 들어감
+- Step Out
+  - ``Shift + F8 (Mac : Shift + F8)``
+  - Step Into를 통해 포커스가 특정 메소드 안으로 들어왔을 때 다시 밖으로 나감
+- Condition
+  - ``브레이크 포인트에서 우클릭, ConditionalBreak에 브레이크를 걸 조건 입력 후 Done.``(조건은 자바코드를 짜듯이 짜면 된다.)
+  - 반복문에서 특정 조건을 가졌을 때만 브레이크 하도록 설정 가능
+  - 브레이크 코드에서 쓸 수 있는 모든 코드를 사용할 수 있음
+- Evaluate Expression
+  - ``Alt + F8 (Mac : Option + F8)``
+  - 라이브러리 분석에 도움이 됨
+  - 현재 브레이크 걸려있는 상태에서 코드를 실행, 연산까지 가능
+  - 켤 때마다 초기화 됨
+- Watch
+  - 단축키는 없음(안경모양의 버튼)
+  - 브레이크 된 시점부터 다음 브레이크까지 값이 변하는 것을 실시간으로 볼 수 있음
+  - 브레이크 이후의 코드 변경 확인
+
+
+
+## Git & Github
+
+### Git 기본 기능 사용하기
+
+- Git View On
+
+  - View -> Tool Windows -> Version Control
+
+  - ``Alt + 9 (Mac : Command + 9)``
+    - Local Changes : 변경이 필요하거나 변경한 파일의 확인이 필요한 경우 사용(Show Diff (단축키 : ``Ctrl + D``)를 통해서 변경 사항을 확인하고 그 안에서도 변경할 수 있음 / Revert = 변경 사항 취소)
+    - Log : 커밋 로그 확인, 우클릭 시 커밋에 관련된 여러 기능을 사용할 수 있음
+    - Console 
+
+- Git Option Popup
+
+  - ``Alt + Back Quote(`) (Mac : Ctrl + V)``
+
+- Git History
+
+  - ``Git Option Popup -> 4. Show History``
+
+- Branch
+
+  - ``Git Option Popup -> 7. Branches``
+
+- Commit
+
+  - ``Git Option Popup -> 1. Commit`` or ``Ctrl + K (Mac : Command + K)``
+
+- Push
+
+  - `Ctrl + Shift +K (Mac : Command + Shift + K)` 
+  - 파일이 새로 생성된 경우에는 커밋&푸시를 지원하지 않으므로 push는 별도로 진행해야 함
+
+- Pull
+
+  - ``단축키가 없음``
+  - Action 검색(``Ctrl + Shift + A``)을 통해 ``git pull`` 검색 후 ``Pull`` 클릭
+
+
+
+### Github 연동하기
+
+- 기존 프로젝트 Github에 연동하기
+  - Action 검색(``Ctrl + Shift + A``) -> ``share github`` 입력 후 ``Share Project on Github`` 선택
+  - Login
+  - New repository name, Remote name(origin), Description 입력 후 Share 클릭
+  - Commit Message 입력
+
+- Github 프로젝트 Clone 받기
+  - 메인 화면에서 ``Check out from Version Control`` -> ``Git`` 선택
+  - URL 입력 or 로그인 시 자신의 프로젝트 목록에서 선택할 수 있음
+
+
+
+## 플러그인
+
+### 플러그인
+
+- 플러그인 설치
+  - Action 검색(``Ctrl + Shift + A``) -> ``plugins`` 검색 ``Preferences plugins`` 선택
+  - ``Browse repositories`` 선택
+  - ``sort by Downloads`` : 어느 정도 검증된 플러그인 확인 가능(다운로드 순으로 정렬)
+- 추천 플러그인
+  - ``.ignore``
+  - ``presentation assistent`` : 프로젝트 생성 부분에서 소개
+  - ``BashSupport`` : shell file 작성을 도와줌
+    - 터미널 사용 : ``Alt + F12 (Mac : Option + F12)``
+    - 터미널에서 작성된 .sh 파일 실행 가능
+  - ``Material Theme UI``
+  - 번역 플러그인 : jojoldu 검색 후 설치 (``단축키 : Alt 1, 2, 3 (Mac : Option + 1, 2, 3)``)
+    - ``Alt + 1`` : 영어를 한글로 번역
+    - ``Alt + 2`` : 한글을 영어로 변역
+    - ``Alt + 3`` : 긴 문장을 번역
 
