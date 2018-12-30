@@ -1,6 +1,16 @@
-# TIL
-Today I Learned, Daily commit!
+# 📝Today I learned, Daily commit!
+- 하루 동안 학습한 내용들을 기록
 
-## 1. 다짐
-- 급하게 커밋하지 말고 미리미리 해두자.
-- 중요한 것은 포기하지 않는 것. 더딘 것을 염려하지 말고, 멈출 것을 염려하자.
+## List(A to Z)
+- [Algorithm](https://github.com/Kim-JunHyeong/Algorithm)
+- [Docker](https://github.com/Kim-JunHyeong/TIL/tree/develop/docker)
+- [FastCampus](https://github.com/Kim-JunHyeong/TIL/tree/develop/fastcampus_JWPM)
+- [Git](https://github.com/Kim-JunHyeong/TIL/tree/develop/git)
+- [IntelliJ](https://github.com/Kim-JunHyeong/TIL/tree/develop/intelliJ)
+- [Java](https://github.com/Kim-JunHyeong/TIL/tree/develop/java)
+- [JavaScript](https://github.com/Kim-JunHyeong/TIL/tree/develop/javascript)
+- JPA
+- Network
+- [Spring](https://github.com/Kim-JunHyeong/TIL/tree/develop/spring)
+- Spring Boot
+- Terms(용어 정리)
