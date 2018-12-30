@@ -1,6 +1,6 @@
 # IntelliJ 가이드 내용 정리
 
->  해당 내용은 Inflearn의 창천향로님이 강의하신 [IntelliJ를 시작하시는 분들을 위한 IntelliJ 가이드](https://www.inflearn.com/course/intellij-guide/)를 참고하여 작성하였습니다.
+>  해당 내용은 Inflearn의 창천향로님이 강의하신 [IntelliJ를 시작하시는 분들을 위한 IntelliJ 가이드](https://www.inflearn.com/course/intellij-guide/)를 참고하여 작성하였습니다. 문제가 된다면 삭제하겠습니다.
 >
 >  - [창천향로님의 GitHub](github.com/jojoldu)
 >  - [창천향로님의 Blog](https://jojoldu.tistory.com/)
