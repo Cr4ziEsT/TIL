@@ -1,6 +1,7 @@
 package hellojpa;
 
 import hellojpa.entity.Member;
+import hellojpa.entity.MemberType;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -17,9 +18,11 @@ public class Main {
         tx.begin();// 트랜잭션 시작
 
         try {
+            // 등록
             Member member = new Member();
-            member.setId(100L);
+//            member.setId(100L);
             member.setName("안녕하세요");
+            member.setMemberType(MemberType.ADMIN);
 
             em.persist(member); // persist : 영구저장
 
@@ -32,6 +35,3 @@ public class Main {
         emf.close();
     }
 }
-/* 주의
-but 스프링 프레임워크를 쓸 때는 이런 고민을 별로 할 필요가 없다...(트러블 슈팅 할 때에나 필요할까?)
- */
