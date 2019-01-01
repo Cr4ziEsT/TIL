@@ -31,6 +31,24 @@ public class Main {
 //            team.getMembers().add(member);
             member.setTeam(team);
 
+            em.flush();
+            em.clear();
+
+            Member findMember = em.find(Member.class, member.getId());
+
+            em.close();
+
+            Team findTeam = findMember.getTeam();
+            findTeam.getName();
+            System.out.println("findteam = " + findTeam);
+
+//            findMember.setName("t아카데미");
+// LazyInitializationException 예외 = 준영속 상태의
+//            em.detach(findMember);
+//            em.clear();
+
+            // 처음 저장하는 것이 아니면 em.persist 를 할 필요가 없다.
+
             tx.commit();
         } catch (Exception e) {
             tx.rollback();
