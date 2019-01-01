@@ -8,6 +8,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,22 +26,29 @@ public class Main {
             em.persist(team);
             // 회원 저장
             Member member = new Member();
-            member.setName("member1");
-//            member.setTeam(team);
-            em.persist(member);
-//            team.getMembers().add(member);
+            member.setName("hello");
             member.setTeam(team);
+            em.persist(member);
+            team.getMembers().add(member);
+//            member.setTeam(team);
 
-            em.flush();
-            em.clear();
+            // 검색(7강 실습)
+            String jpql = "select m From Member m join fetch m.team where m.name like '%hello%'";
+            List<Member> resultList = em.createQuery(jpql, Member.class)
+                    .setFirstResult(10)
+                    .setMaxResults(20)
+                    .getResultList();
 
-            Member findMember = em.find(Member.class, member.getId());
-
-            em.close();
-
-            Team findTeam = findMember.getTeam();
-            findTeam.getName();
-            System.out.println("findteam = " + findTeam);
+//            em.flush();
+//            em.clear();
+//
+//            Member findMember = em.find(Member.class, member.getId());
+//
+//            em.close();
+//
+//            Team findTeam = findMember.getTeam();
+//            findTeam.getName();
+//            System.out.println("findteam = " + findTeam);
 
 //            findMember.setName("t아카데미");
 // LazyInitializationException 예외 = 준영속 상태의
