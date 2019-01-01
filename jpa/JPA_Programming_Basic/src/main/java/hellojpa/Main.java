@@ -21,29 +21,15 @@ public class Main {
         try {
             // 팀 저장
             Team team = new Team();
-            team.setName("teamA");
+            team.setName("TeamA");
             em.persist(team);
             // 회원 저장
             Member member = new Member();
             member.setName("member1");
-            member.setTeam(team);
+//            member.setTeam(team);
             em.persist(member);
-
-            // 조회시 쿼리문을 보기 위함
-//            em.flush();
-//            em.clear();       // 지워줘야 수정이 작동됨
-
-            // 조회
-            Member findMember = em.find(Member.class, member.getId());
-            // 참조를 사용해서 연관관계 조회
-            Team findTeam = findMember.getTeam();
-
-            // 새로운 팀B
-            Team teamB = new Team();
-            teamB.setName("TeamB");
-            em.persist(teamB);
-            // 회원1에 새로운 팀B 설정
-            member.setTeam(teamB);
+//            team.getMembers().add(member);
+            member.setTeam(team);
 
             tx.commit();
         } catch (Exception e) {
