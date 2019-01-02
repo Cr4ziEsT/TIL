@@ -9,7 +9,7 @@
 - [IntelliJ](https://github.com/Kim-JunHyeong/TIL/tree/develop/intelliJ)
 - [Java](https://github.com/Kim-JunHyeong/TIL/tree/develop/java)
 - [JavaScript](https://github.com/Kim-JunHyeong/TIL/tree/develop/javascript)
-- JPA
+- [JPA](https://github.com/Kim-JunHyeong/TIL/tree/develop/jpa)
 - Network
 - [Spring](https://github.com/Kim-JunHyeong/TIL/tree/develop/spring)
 - Spring Boot
