@@ -1,5 +1,5 @@
 # 📝Today I learned, Daily commit!
-- 하루 동안 학습한 내용들을 기록
+- 하루 동안 학습한 내용들을 기록test
 
 ## List(A to Z)
 - [Algorithm](https://github.com/Kim-JunHyeong/Algorithm)
