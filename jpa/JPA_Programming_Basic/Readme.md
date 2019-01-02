@@ -80,6 +80,7 @@
 ### 객체 매핑하기
 
 - Entity : JPA가 관리할 객체
+
   - 엔티티라고 함
 - @Id : DB PK와 매핑할 필드
 
@@ -709,9 +710,9 @@ em.persist(memberB);
 transaction.commit();	// [트랜잭션] 커밋
 ```
 
-사진1
+![사진1](https://github.com/Kim-JunHyeong/TIL/blob/develop/jpa/JPA_Programming_Basic/image/01.png)
 
-사진2
+![사진2](https://github.com/Kim-JunHyeong/TIL/blob/develop/jpa/JPA_Programming_Basic/image/02.png)
 
 ### 엔티티 수정(변경 감지)
 
@@ -734,7 +735,7 @@ transaction.commit(); // [트랜잭션] 커밋
 
 - **변경 감지(Dirty Checking)**
 
-사진3
+![사진3](https://github.com/Kim-JunHyeong/TIL/blob/develop/jpa/JPA_Programming_Basic/image/03.png)
 
 ### 엔티티 삭제
 
