@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.hateoas.MediaTypes;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
@@ -16,6 +17,7 @@ import java.time.LocalDateTime;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -54,9 +56,11 @@ public class EventControllerTest {
                     .contentType(MediaType.APPLICATION_JSON_UTF8)  // 요청의 본문에 JSON Data 를 담아서 보내고 있다.
                     .accept(MediaTypes.HAL_JSON)                   // 응답으로는 HAL_JSON Data 를 받기를 원한다.
                     .content(objectMapper.writeValueAsString(event))) // 데이터를 Json 으로 변경해줘야함
-                .andDo(print())     // 응답과 요청을 확인하고 싶을 때 사용
+                .andDo(print())     // `Test`가 성공을 해도 결과를 확인하고 싶을 때 사용
                 .andExpect(status().isCreated())                   // 201 응답이 나올거야!
                 .andExpect(jsonPath("id").exists())    // id는 있어?
+                .andExpect(header().exists(HttpHeaders.LOCATION))
+                .andExpect(header().string(HttpHeaders.CONTENT_TYPE, MediaTypes.HAL_JSON_UTF8_VALUE))
                 ;
     }
 
