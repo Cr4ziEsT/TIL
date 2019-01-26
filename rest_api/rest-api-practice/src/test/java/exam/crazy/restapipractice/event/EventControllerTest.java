@@ -94,4 +94,14 @@ public class EventControllerTest {
         ;
     }
 
+    @Test
+    public void createEvent_Bad_Request_Empty_Input() throws Exception {
+        EventDto eventDto = EventDto.builder()
+                            .build();
+
+        this.mockMvc.perform(post("/api/events")
+                    .contentType(MediaType.APPLICATION_JSON_UTF8)               // `JSON`으로 데이터를 보낸다.
+                    .content(this.objectMapper.writeValueAsString(eventDto)))   // `eventDto Object`를 `JSON`으로 변환해서 `content`에 담는다.
+                .andExpect(status().isBadRequest());
+    }
 }
