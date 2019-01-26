@@ -38,7 +38,7 @@ public class EventController {
 
         eventValidator.validate(eventDto, errors);
         if (errors.hasErrors()) {
-            return ResponseEntity.badRequest().build();
+            return ResponseEntity.badRequest().body(errors);
         }
 
         // `Entity`와 `DTO`를 분리시켰을 때 `DTO`로 받아온 값을 `Entity`로 옮겨줘야 한다.
