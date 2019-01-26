@@ -5,7 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-// @Data 라는 어노테이션은 아래의 어노테이션들을 구현하는데
+// @Data 라는 어노테이션은 아래의 어노테이션들(@Getter, @Setter, @EqualsAndHashCode)을 구현하는데
 // 이러면 엔티티 간에 상호 참조하는 관계가 되어 스택오버플로우가 발생할 여지가 있기 때문에 적어도 Entity 위에는 적어주지 않는 것이 바람직하다.
 
 @Builder @AllArgsConstructor @NoArgsConstructor     // 기본 생성자와 모든 아규먼트를 가지고 있는 생성자를 만들기 위함
@@ -31,5 +31,5 @@ public class Event {
     private boolean offline;
     private boolean free;
     @Enumerated(EnumType.STRING)    // 권장
-    private EventStatus eventStatus;
+    private EventStatus eventStatus = EventStatus.DRAFT;
 }
