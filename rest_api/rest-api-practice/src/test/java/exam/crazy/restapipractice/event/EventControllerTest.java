@@ -63,8 +63,8 @@ public class EventControllerTest {
                 .andExpect(jsonPath("id").exists())    // id는 있어?
                 .andExpect(header().exists(HttpHeaders.LOCATION))
                 .andExpect(header().string(HttpHeaders.CONTENT_TYPE, MediaTypes.HAL_JSON_UTF8_VALUE))
-                .andExpect(jsonPath("id").value(Matchers.not(100)))     // 이 값은 들어오면 안 됨!
-                .andExpect(jsonPath("free").value(Matchers.not(true)))  // 이 값은 들어오면 안 됨!
+                .andExpect(jsonPath("free").value(false))
+                .andExpect(jsonPath("offline").value(true))
                 .andExpect(jsonPath("eventStatus").value(EventStatus.DRAFT.name()))  // 처음 만드는 것은 DRAFT 임 .name()를 생략하면 `Test`가 깨짐
         ;
     }

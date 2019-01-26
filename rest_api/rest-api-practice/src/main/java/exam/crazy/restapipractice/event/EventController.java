@@ -47,6 +47,7 @@ public class EventController {
         // 위와 같은 방법을 생략할 수 있는 방법이 `ModelMapper`를 사용하는 것이다.
         // 이때 리플렉션이 발생하여 직접 일일이 작성하는 것보다는 성능이 떨어지지만 자바 성능이 올라갈수록 성능이 좋아졌기때문에 크게 우려할 점은 아니다.
         Event event = modelMapper.map(eventDto, Event.class);
+        event.update(); // service class 에 위임하는 것이 좋다.
 
         Event newEvent = this.eventRepository.save(event);
 
