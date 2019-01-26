@@ -2,6 +2,7 @@ package exam.crazy.restapipractice.event;
 
 import lombok.*;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 // @Data 라는 어노테이션은 아래의 어노테이션들을 구현하는데
@@ -12,8 +13,10 @@ import java.time.LocalDateTime;
 // Equals 와 HashCode 를 구현할 때 모든 필드를 다 사용한다.
 // 그런데 객체 간에 연관관계가 있을 때 서로 상호 참조하는 관계가 돼버리면 Equals 와 HashCode 를 구현한 객체 안에서 스택오버플로우가 발생할 수 있다.
 // 그래서 id의 값만 가지고 equals 와 hashcode 를 비교하도록 만든 것
+@Entity
 public class Event {
 
+    @Id @GeneratedValue
     private Integer id;
     private String name;
     private String description;
@@ -23,8 +26,10 @@ public class Event {
     private LocalDateTime endEventDateTime;
     private String location; // (optional) 이게 없으면 온라인 모임
     private int basePrice; // (optional)
+    private int maxPrice;  // (optional)
     private int limitOfEnrollment;
     private boolean offline;
-    private boolean fre;
+    private boolean free;
+    @Enumerated(EnumType.STRING)    // 권장
     private EventStatus eventStatus;
 }
