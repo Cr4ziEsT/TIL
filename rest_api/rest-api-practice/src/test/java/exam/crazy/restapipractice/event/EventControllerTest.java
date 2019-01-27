@@ -66,6 +66,9 @@ public class EventControllerTest {
                 .andExpect(jsonPath("free").value(false))
                 .andExpect(jsonPath("offline").value(true))
                 .andExpect(jsonPath("eventStatus").value(EventStatus.DRAFT.name()))  // 처음 만드는 것은 DRAFT 임 .name()를 생략하면 `Test`가 깨짐
+                .andExpect(jsonPath("_links.self").exists())         // 3 가지의 링크 정보가 응답으로 오기를 원해!
+                .andExpect(jsonPath("_links.query-events").exists())
+                .andExpect(jsonPath("_links.update-event").exists())
         ;
     }
 

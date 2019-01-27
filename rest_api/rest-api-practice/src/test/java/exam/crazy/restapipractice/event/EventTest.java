@@ -35,6 +35,7 @@ public class EventTest {
         assertThat(event.getDescription()).isEqualTo(description);
     }
 
+//    Type safe 하지 않음
 //    @Parameters({
 //            "0, 0, true",
 //            "100, 0, false",
