@@ -7,14 +7,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping(method = RequestMethod.GET)
+@RequestMapping("/hello")
 public class SampleController {
 
-//    @RequestMapping(value = "/hello", method = {RequestMethod.GET, RequestMethod.PUT})
-//    @GetMapping("/hello")
-    @RequestMapping("/hello")
+//    @GetMapping({"/hello", "/hi"})
+    @RequestMapping("/junhyeong")
     @ResponseBody
-    public String hello() {
-        return "hello";
+    public String helloJunhyeong() {
+        return "hello junhyeong";
     }
 }

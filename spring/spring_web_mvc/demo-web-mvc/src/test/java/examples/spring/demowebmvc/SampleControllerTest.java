@@ -10,6 +10,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.handler;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 
@@ -22,19 +23,17 @@ public class SampleControllerTest {
 
     @Test
     public void helloTest() throws Exception {
-        mockMvc.perform(get("/hello"))
+        mockMvc.perform(get("/hello/junhyeong.xml"))
                 .andDo(print())
-                .andExpect(status().isOk())
+                .andExpect(status().isNotFound())
+//                .andExpect(content().string("hello junhyeong"))
+//                .andExpect(handler().handlerType(SampleController.class))
+//                .andExpect(handler().methodCall("helloJunhyeong"))
         ;
-
-        mockMvc.perform(put("/hello"))
-                .andDo(print())
-                .andExpect(status().isMethodNotAllowed())
-        ;
-
-        mockMvc.perform(post("/hello"))
-                .andDo(print())
-                .andExpect(status().isMethodNotAllowed())   // 405 응답, 서버에서 허용하지 않음
-        ;
+//
+//        mockMvc.perform(get("/hi"))
+//                .andDo(print())
+//                .andExpect(status().isOk())
+//        ;
     }
 }
