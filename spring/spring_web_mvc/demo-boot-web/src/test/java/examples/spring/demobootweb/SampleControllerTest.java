@@ -1,5 +1,6 @@
 package examples.spring.demobootweb;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.hamcrest.Matchers;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,6 +9,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -27,6 +29,9 @@ public class SampleControllerTest {
 
     @Autowired
     PersonRepository personRepository;
+
+    @Autowired
+    ObjectMapper objectMapper; // `SpringBoot`는 이미 `ObjectMapper`가 `Bean`으로 등록이 되어 있다.
 
     @Test
     public void hello() throws Exception {
@@ -57,6 +62,31 @@ public class SampleControllerTest {
                 .andExpect(content().string(Matchers.containsString("Hello Mobile")))
                 .andExpect(header().exists(HttpHeaders.CACHE_CONTROL))
         ;
+    }
+
+    @Test
+    public void stringMessage() throws Exception {
+        this.mockMvc.perform(get("/message")
+                    .content("hello"))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(content().string("hello"));
+    }
+
+    @Test
+    public void jsonMessage() throws Exception {
+        Person person = new Person();
+        person.setId(2019L);
+        person.setName("keesun");
+
+        String jsonString = objectMapper.writeValueAsString(person);    // 만든 객체를 Json 문자열로 변경
+
+        this.mockMvc.perform(get("/jsonMessage")
+                    .contentType(MediaType.APPLICATION_JSON_UTF8)   // 내가 본문에 보내는 정보가 어떠한 타입인지를 서버에 알려줌
+                    .accept(MediaType.APPLICATION_JSON_UTF8)        // 요청에 대한 응답으로 어떠한 타입의 데이터를 원한다!!
+                    .content(jsonString))
+                .andDo(print())
+                .andExpect(status().isOk());
     }
 
 }

@@ -3,10 +3,12 @@ package examples.spring.demobootweb;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.FormatterRegistry;
 import org.springframework.http.CacheControl;
+import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @Configuration
@@ -33,4 +35,14 @@ public class WebConfig implements WebMvcConfigurer {
                 // Transformer : 응답으로 내보낼 그 리소스를 변경하는 방법
         ;
     }
+
+//    @Override
+//    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+//        // 메세지 컨버터를 추가하고 싶을때 사용, 하지만 해당 메서드를 오버라이드하면 기본 컨버터를 사용하지 못하게 됨
+//    }
+
+//    @Override
+//    public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
+//        // 기본 컨버터에 추가로 메세지 컨버터를 추가하고 싶을 때 사용, 하지만 대부분 사용하지 않음
+//    }
 }
