@@ -9,11 +9,11 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.hamcrest.CoreMatchers.hasItems;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.handler;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 
 @RunWith(SpringRunner.class)
@@ -25,11 +25,15 @@ public class SampleControllerTest {
 
     @Test
     public void helloTest() throws Exception {
-        mockMvc.perform(get("/hello")
-//                    .header(HttpHeaders.AUTHORIZATION, "111"))
-                        .param("name", "junhyeong"))
+        mockMvc.perform(options("/hello"))
                 .andDo(print())
                 .andExpect(status().isOk())
+                .andExpect(header().exists(HttpHeaders.ALLOW))
+                .andExpect(header().stringValues(HttpHeaders.ALLOW, hasItems(
+                            containsString("GET"),
+                            containsString("POST"),
+                            containsString("HEAD"),
+                            containsString("OPTIONS"))))
         ;
     }
 }
