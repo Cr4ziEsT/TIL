@@ -12,15 +12,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class SampleController {
 
 //    @RequestMapping(value = "/hello", headers = "!" + HttpHeaders.FROM)
-    @GetMapping("/hello")
+    @GetHelloMapping
     @ResponseBody
     public String hello() {
-        return "hello";
-    }
-
-    @PostMapping("/hello")
-    @ResponseBody
-    public String helloPost() {
         return "hello";
     }
 }
