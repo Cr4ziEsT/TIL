@@ -48,6 +48,24 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- XML 메시지 컨버터 의존성 -->
+        <dependency>    <!-- JAXB 인터페이스 -->
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+        </dependency>
+        <dependency>    <!-- JAXB 인터페이스를 구현한 구현체 -->
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+        </dependency>
+        <!-- 객체를 Xml로 변환하는 것을 마셜링, 언마셜링이라고 부른다. -->
+        <!-- 그것을 추상화 해놓은 API -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-oxm</artifactId>     <!-- spring-oxm 이 제공하는 마셜러를 Bean 으로 등록해서 사용, 마셜러를 사용해서 객체를 xml 로 변환하고 그것을 문자열로 받아 사용 -->
+            <version>${spring-framework.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>

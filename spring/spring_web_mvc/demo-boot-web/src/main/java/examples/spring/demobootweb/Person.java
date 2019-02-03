@@ -3,7 +3,9 @@ package examples.spring.demobootweb;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement // JAXB 가 변환을 할 수 있도록 알려주는 역할
 @Entity
 public class Person {
 
