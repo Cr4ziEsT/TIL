@@ -11,8 +11,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 
 @RunWith(SpringRunner.class)
@@ -23,7 +22,15 @@ public class SampleControllerTest {
     MockMvc mockMvc;
 
     @Test
-    public void getEvent() throws Exception {
+    public void eventForm() throws Exception {
+        mockMvc.perform(get("/events/form"))
+                .andDo(print())
+                .andExpect(view().name("/events/form"))
+                .andExpect(model().attributeExists("event"));
+    }
+
+    @Test
+    public void postEvent() throws Exception {
         mockMvc.perform(post("/events")
                     .param("name", "junhyeong")
                     .param("limit", "20"))
