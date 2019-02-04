@@ -5,12 +5,15 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.support.SessionStatus;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
 @Controller
+@SessionAttributes("event")
 public class SampleController {
 
     @GetMapping("/events/form")
@@ -22,11 +25,13 @@ public class SampleController {
     }
 
     @PostMapping("/events")
-    public String createEvent(@Validated @ModelAttribute Event event, BindingResult bindingResult){
+    public String createEvent(@Validated @ModelAttribute Event event,
+                              BindingResult bindingResult,
+                              SessionStatus sessionStatus){
         if(bindingResult.hasErrors()) {
             return "/events/form";
         }
-
+        sessionStatus.setComplete();    // session 을 비워줌
         return "redirect:/events/list";
     }
 
