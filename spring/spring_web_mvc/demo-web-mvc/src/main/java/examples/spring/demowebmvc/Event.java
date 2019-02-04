@@ -1,11 +1,14 @@
 package examples.spring.demowebmvc;
 
+import javax.validation.constraints.Min;
+
 public class Event {
 
     private Long id;
 
     private String name;
 
+    @Min(0)
     private Integer limit;
 
     public Integer getLimit() {
