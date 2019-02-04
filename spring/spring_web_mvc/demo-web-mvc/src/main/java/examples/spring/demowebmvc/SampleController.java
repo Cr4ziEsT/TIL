@@ -7,6 +7,8 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class SampleController {
@@ -20,15 +22,25 @@ public class SampleController {
     }
 
     @PostMapping("/events")
-    @ResponseBody
-    public Event getEvent(@Validated(Event.ValidateName.class) @ModelAttribute Event event, BindingResult bindingResult){
-//    public Event getEvent(@RequestParam(required = false, defaultValue = "keesun") String name){
+    public String createEvent(@Validated @ModelAttribute Event event, BindingResult bindingResult){
         if(bindingResult.hasErrors()) {
-            System.out.println("===============");
-            bindingResult.getAllErrors().forEach(c -> {
-                System.out.println(c.toString());
-            });
+            return "/events/form";
         }
-        return event;
+
+        return "redirect:/events/list";
+    }
+
+    @GetMapping("/events/list")
+    public String getEvents(Model model) {
+        List<Event> eventList = new ArrayList<>();
+        Event event = new Event();
+        event.setLimit(10);
+
+        event.setName("spring");
+        eventList.add(event);
+
+        model.addAttribute(eventList);
+
+        return "/events/list";
     }
 }
