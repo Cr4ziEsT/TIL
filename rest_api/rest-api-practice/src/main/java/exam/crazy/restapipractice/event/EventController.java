@@ -1,6 +1,7 @@
 package exam.crazy.restapipractice.event;
 
 import org.modelmapper.ModelMapper;
+import org.springframework.hateoas.Link;
 import org.springframework.hateoas.MediaTypes;
 import org.springframework.hateoas.mvc.ControllerLinkBuilder;
 import org.springframework.http.ResponseEntity;
@@ -58,6 +59,7 @@ public class EventController {
 
         eventResource.add(linkTo(EventController.class).withRel("query-events"));
         eventResource.add(selfLinkBuilder.withRel("update-event"));
+        eventResource.add(new Link("/docs/index.html#resources-events-create)").withRel("profile"));
         return ResponseEntity.created(createUri).body(eventResource);
     }
 }
