@@ -197,9 +197,10 @@ public class EventControllerTest {
                 .andDo(print())
                 .andExpect(status().isBadRequest())
                 // 발생한 에러의 ObjectName, 기본 field, 기본 메세지, 에러 코드, 에러가 발생한 값들이 존재할 것
-                .andExpect(jsonPath("$[0].objectName").exists())
-                .andExpect(jsonPath("$[0].defaultMessage").exists())
-                .andExpect(jsonPath("$[0].code").exists())
+                .andExpect(jsonPath("content[0].$[0].objectName").exists())
+                .andExpect(jsonPath("content[0].$[0].defaultMessage").exists())
+                .andExpect(jsonPath("content[0].$[0].code").exists())
+                .andExpect(jsonPath("_links.index").exists())
         ;
     }
 }
